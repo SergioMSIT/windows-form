@@ -107,10 +107,10 @@
     <Compile Include="connexion.Designer.cs">
       <DependentUpon>connexion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Franprix_gestionDataSet1.Designer.cs">
+    <Compile Include="Franprix_gestionDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Franprix_gestionDataSet1.xsd</DependentUpon>
+      <DependentUpon>Franprix_gestionDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="gestiondestock.cs">
       <SubType>Form</SubType>
@@ -140,16 +140,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="Franprix_gestionDataSet1.xsc">
-      <DependentUpon>Franprix_gestionDataSet1.xsd</DependentUpon>
+    <None Include="Franprix_gestionDataSet.xsc">
+      <DependentUpon>Franprix_gestionDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Franprix_gestionDataSet1.xsd">
+    <None Include="Franprix_gestionDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Franprix_gestionDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Franprix_gestionDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Franprix_gestionDataSet1.xss">
-      <DependentUpon>Franprix_gestionDataSet1.xsd</DependentUpon>
+    <None Include="Franprix_gestionDataSet.xss">
+      <DependentUpon>Franprix_gestionDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
