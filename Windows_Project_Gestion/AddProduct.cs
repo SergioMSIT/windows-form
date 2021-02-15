@@ -22,7 +22,6 @@ namespace Windows_Project_GestionPAGE1
         public string cs = @"Server = .\SQLEXPRESS; Database = Franprix_gestion; Trusted_Connection = True;";
 
         private void btnAddProduct_Click(object sender, EventArgs e)
-
         {
             if (textNom.Text == "")
             {
@@ -99,12 +98,17 @@ namespace Windows_Project_GestionPAGE1
                     " VALUES ('" + textNom.Text.ToString() + "','" + textMarque.Text.ToString() + "'," + poids + ", " 
                     + volume + ", " + taille + "," + textPrixht.Text.ToString() + ", " + 
                     comboBoxTVA.Text.ToString() + "," + Convert.ToInt32(comboBoxCategorie.SelectedValue).ToString() + ",'" +
-                    nutriscore + "'," + textStockmax.Text.ToString() + "," + textStockcourant.Text.ToString() 
-                    + "," + textStockmini.Text.ToString() + "," + presentation + ")";                
-                SqlCommand cmd = new SqlCommand(q, con);
+                    nutriscore + "'," + textStockmax.Text.ToString() + "," + textStockcourant.Text.ToString()
+                    + "," + textStockmini.Text.ToString() + ",'" + presentation + "')";
+            SqlCommand cmd = new SqlCommand(q, con);
                 int res = cmd.ExecuteNonQuery();
-                 if (res > 0)    
-                      MessageBox.Show("Produit ajouté");
+            if (res > 0)
+            {
+                MessageBox.Show("Produit ajouté");
+            }
+
+            this.Close();
+
             
         }
 
@@ -123,6 +127,16 @@ namespace Windows_Project_GestionPAGE1
         private void comboBoxCategorie_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAnnuler_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

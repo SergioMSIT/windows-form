@@ -36,6 +36,7 @@ namespace Windows_Project_GestionPAGE1
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBoxCategorie = new System.Windows.Forms.ComboBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.franprix_gestionDataSet = new Windows_Project_GestionPAGE1.Franprix_gestionDataSet();
             this.richTextBoxPresentation = new System.Windows.Forms.RichTextBox();
             this.comboBoxTVA = new System.Windows.Forms.ComboBox();
             this.comboBoxNutriscore = new System.Windows.Forms.ComboBox();
@@ -60,8 +61,8 @@ namespace Windows_Project_GestionPAGE1
             this.textPoids = new System.Windows.Forms.TextBox();
             this.textMarque = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.franprix_gestionDataSet = new Windows_Project_GestionPAGE1.Franprix_gestionDataSet();
             this.categorieTableAdapter1 = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.CategorieTableAdapter();
+            this.buttonAnnuler = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
@@ -119,6 +120,7 @@ namespace Windows_Project_GestionPAGE1
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ajouter un produit";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // comboBoxCategorie
             // 
@@ -138,6 +140,11 @@ namespace Windows_Project_GestionPAGE1
             // 
             this.bindingSource1.DataMember = "Categorie";
             this.bindingSource1.DataSource = this.franprix_gestionDataSet;
+            // 
+            // franprix_gestionDataSet
+            // 
+            this.franprix_gestionDataSet.DataSetName = "Franprix_gestionDataSet";
+            this.franprix_gestionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // richTextBoxPresentation
             // 
@@ -347,20 +354,28 @@ namespace Windows_Project_GestionPAGE1
             this.label13.TabIndex = 8;
             this.label13.Text = "Nom";
             // 
-            // franprix_gestionDataSet
-            // 
-            this.franprix_gestionDataSet.DataSetName = "Franprix_gestionDataSet";
-            this.franprix_gestionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // categorieTableAdapter1
             // 
             this.categorieTableAdapter1.ClearBeforeFill = true;
+            // 
+            // buttonAnnuler
+            // 
+            this.buttonAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAnnuler.Location = new System.Drawing.Point(898, 358);
+            this.buttonAnnuler.Name = "buttonAnnuler";
+            this.buttonAnnuler.Size = new System.Drawing.Size(143, 57);
+            this.buttonAnnuler.TabIndex = 9;
+            this.buttonAnnuler.Text = "Annuler";
+            this.buttonAnnuler.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
             // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.buttonAnnuler;
             this.ClientSize = new System.Drawing.Size(1053, 489);
+            this.Controls.Add(this.buttonAnnuler);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnAddProduct);
             this.Name = "AddProduct";
@@ -411,5 +426,6 @@ namespace Windows_Project_GestionPAGE1
         private Franprix_gestionDataSet franprix_gestionDataSet2;
         private Franprix_gestionDataSet franprix_gestionDataSet;
         private Franprix_gestionDataSetTableAdapters.CategorieTableAdapter categorieTableAdapter1;
+        private System.Windows.Forms.Button buttonAnnuler;
     }
 }

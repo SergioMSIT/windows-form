@@ -25,7 +25,7 @@ namespace Windows_Project_GestionPAGE1
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AddProduct addprod = new AddProduct();
-            addprod.Show();
+            addprod.ShowDialog();
         }
 
 
