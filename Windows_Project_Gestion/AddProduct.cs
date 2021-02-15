@@ -112,10 +112,7 @@ namespace Windows_Project_GestionPAGE1
             
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void AddProduct_Load(object sender, EventArgs e)
         {
@@ -124,15 +121,7 @@ namespace Windows_Project_GestionPAGE1
 
         }
 
-        private void comboBoxCategorie_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonAnnuler_Click(object sender, EventArgs e)
         {

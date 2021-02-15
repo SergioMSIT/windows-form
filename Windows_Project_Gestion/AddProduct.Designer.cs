@@ -71,7 +71,7 @@ namespace Windows_Project_GestionPAGE1
             // btnAddProduct
             // 
             this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.Location = new System.Drawing.Point(440, 358);
+            this.btnAddProduct.Location = new System.Drawing.Point(898, 358);
             this.btnAddProduct.Name = "btnAddProduct";
             this.btnAddProduct.Size = new System.Drawing.Size(143, 57);
             this.btnAddProduct.TabIndex = 6;
@@ -120,7 +120,6 @@ namespace Windows_Project_GestionPAGE1
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ajouter un produit";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // comboBoxCategorie
             // 
@@ -134,7 +133,7 @@ namespace Windows_Project_GestionPAGE1
             this.comboBoxCategorie.Size = new System.Drawing.Size(100, 24);
             this.comboBoxCategorie.TabIndex = 35;
             this.comboBoxCategorie.ValueMember = "ID";
-            this.comboBoxCategorie.SelectedIndexChanged += new System.EventHandler(this.comboBoxCategorie_SelectedIndexChanged);
+  
             // 
             // bindingSource1
             // 
@@ -360,8 +359,9 @@ namespace Windows_Project_GestionPAGE1
             // 
             // buttonAnnuler
             // 
+            this.buttonAnnuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.buttonAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAnnuler.Location = new System.Drawing.Point(898, 358);
+            this.buttonAnnuler.Location = new System.Drawing.Point(749, 358);
             this.buttonAnnuler.Name = "buttonAnnuler";
             this.buttonAnnuler.Size = new System.Drawing.Size(143, 57);
             this.buttonAnnuler.TabIndex = 9;
