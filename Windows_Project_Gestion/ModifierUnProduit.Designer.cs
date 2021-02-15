@@ -1,7 +1,7 @@
 ﻿
 namespace Windows_Project_GestionPAGE1
 {
-    partial class ModifierProduit
+    partial class ModifierUnProduit
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Windows_Project_GestionPAGE1
 {
-    public partial class ModifierProduit : Form
+    public partial class ModifierUnProduit : Form
     {
-        public ModifierProduit()
+        public ModifierUnProduit()
         {
             InitializeComponent();
         }
