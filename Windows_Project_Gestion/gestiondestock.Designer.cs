@@ -36,6 +36,7 @@
             this.btnDeconnexion = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.categorieTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.CategorieTableAdapter();
+            this.BtnModifier = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprixgestionDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
@@ -88,12 +89,24 @@
             // 
             this.categorieTableAdapter.ClearBeforeFill = true;
             // 
+            // BtnModifier
+            // 
+            this.BtnModifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnModifier.Location = new System.Drawing.Point(983, 260);
+            this.BtnModifier.Name = "BtnModifier";
+            this.BtnModifier.Size = new System.Drawing.Size(135, 39);
+            this.BtnModifier.TabIndex = 8;
+            this.BtnModifier.Text = "Modifer ce produit";
+            this.BtnModifier.UseVisualStyleBackColor = true;
+            this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
+            // 
             // gestionstock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(136)))), ((int)(((byte)(73)))));
             this.ClientSize = new System.Drawing.Size(1130, 737);
+            this.Controls.Add(this.BtnModifier);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDeconnexion);
             this.Controls.Add(this.pictureBox1);
@@ -117,5 +130,6 @@
         private System.Windows.Forms.Button btnDeconnexion;
         private System.Windows.Forms.Button btnAdd;
         private Franprix_gestionDataSetTableAdapters.CategorieTableAdapter categorieTableAdapter;
+        private System.Windows.Forms.Button BtnModifier;
     }
 }

@@ -28,7 +28,12 @@ namespace Windows_Project_GestionPAGE1
             addprod.ShowDialog();
         }
 
-
+        private void BtnModifier_Click(object sender, EventArgs e)
+        {
+            ModifierProduit update  = new ModifierProduit();
+            update.ShowDialog();
+        }
+        
     }
 }
 
