@@ -127,5 +127,10 @@ namespace Windows_Project_GestionPAGE1
         {
             this.Close();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

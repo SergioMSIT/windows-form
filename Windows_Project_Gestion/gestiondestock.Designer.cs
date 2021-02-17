@@ -40,26 +40,42 @@
             this.tableAdapterManager1 = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.TableAdapterManager();
             this.produitTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.ProduitTableAdapter();
             this.dataGridViewgestiondestock = new System.Windows.Forms.DataGridView();
+            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.poidsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tailleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prixHTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.presentationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categorieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nutriscoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockcourantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produitBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categorieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxcategorie = new System.Windows.Forms.ComboBox();
-            this.stockcourantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nutriscoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categorieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.presentationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prixHTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tailleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.volumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.poidsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridViewproduit = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.choixcategorie = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.quantite = new System.Windows.Forms.GroupBox();
+            this.actuel = new System.Windows.Forms.Label();
+            this.produitBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.minimum = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.buttonajoutquantite = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprixgestionDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewgestiondestock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categorieBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduit)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.quantite.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -135,8 +151,7 @@
             // dataGridViewgestiondestock
             // 
             this.dataGridViewgestiondestock.AllowUserToOrderColumns = true;
-            this.dataGridViewgestiondestock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewgestiondestock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewgestiondestock.AutoGenerateColumns = false;
             this.dataGridViewgestiondestock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dataGridViewgestiondestock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -154,7 +169,7 @@
             this.stockcourantDataGridViewTextBoxColumn});
             this.dataGridViewgestiondestock.DataSource = this.produitBindingSource;
             this.dataGridViewgestiondestock.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewgestiondestock.Location = new System.Drawing.Point(12, 498);
+            this.dataGridViewgestiondestock.Location = new System.Drawing.Point(12, 476);
             this.dataGridViewgestiondestock.MultiSelect = false;
             this.dataGridViewgestiondestock.Name = "dataGridViewgestiondestock";
             this.dataGridViewgestiondestock.ReadOnly = true;
@@ -162,6 +177,105 @@
             this.dataGridViewgestiondestock.RowTemplate.Height = 24;
             this.dataGridViewgestiondestock.Size = new System.Drawing.Size(1485, 275);
             this.dataGridViewgestiondestock.TabIndex = 9;
+            // 
+            // nomDataGridViewTextBoxColumn
+            // 
+            this.nomDataGridViewTextBoxColumn.DataPropertyName = "Nom";
+            this.nomDataGridViewTextBoxColumn.HeaderText = "Nom";
+            this.nomDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
+            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nomDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // marqueDataGridViewTextBoxColumn
+            // 
+            this.marqueDataGridViewTextBoxColumn.DataPropertyName = "Marque";
+            this.marqueDataGridViewTextBoxColumn.HeaderText = "Marque";
+            this.marqueDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.marqueDataGridViewTextBoxColumn.Name = "marqueDataGridViewTextBoxColumn";
+            this.marqueDataGridViewTextBoxColumn.ReadOnly = true;
+            this.marqueDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // poidsDataGridViewTextBoxColumn
+            // 
+            this.poidsDataGridViewTextBoxColumn.DataPropertyName = "Poids";
+            this.poidsDataGridViewTextBoxColumn.HeaderText = "Poids";
+            this.poidsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.poidsDataGridViewTextBoxColumn.Name = "poidsDataGridViewTextBoxColumn";
+            this.poidsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.poidsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // volumeDataGridViewTextBoxColumn
+            // 
+            this.volumeDataGridViewTextBoxColumn.DataPropertyName = "Volume";
+            this.volumeDataGridViewTextBoxColumn.HeaderText = "Volume";
+            this.volumeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.volumeDataGridViewTextBoxColumn.Name = "volumeDataGridViewTextBoxColumn";
+            this.volumeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.volumeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tailleDataGridViewTextBoxColumn
+            // 
+            this.tailleDataGridViewTextBoxColumn.DataPropertyName = "Taille";
+            this.tailleDataGridViewTextBoxColumn.HeaderText = "Taille";
+            this.tailleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tailleDataGridViewTextBoxColumn.Name = "tailleDataGridViewTextBoxColumn";
+            this.tailleDataGridViewTextBoxColumn.ReadOnly = true;
+            this.tailleDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // prixHTDataGridViewTextBoxColumn
+            // 
+            this.prixHTDataGridViewTextBoxColumn.DataPropertyName = "PrixHT";
+            this.prixHTDataGridViewTextBoxColumn.HeaderText = "PrixHT";
+            this.prixHTDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.prixHTDataGridViewTextBoxColumn.Name = "prixHTDataGridViewTextBoxColumn";
+            this.prixHTDataGridViewTextBoxColumn.ReadOnly = true;
+            this.prixHTDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tVADataGridViewTextBoxColumn
+            // 
+            this.tVADataGridViewTextBoxColumn.DataPropertyName = "TVA";
+            this.tVADataGridViewTextBoxColumn.HeaderText = "TVA";
+            this.tVADataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tVADataGridViewTextBoxColumn.Name = "tVADataGridViewTextBoxColumn";
+            this.tVADataGridViewTextBoxColumn.ReadOnly = true;
+            this.tVADataGridViewTextBoxColumn.Width = 125;
+            // 
+            // presentationDataGridViewTextBoxColumn
+            // 
+            this.presentationDataGridViewTextBoxColumn.DataPropertyName = "Presentation";
+            this.presentationDataGridViewTextBoxColumn.HeaderText = "Presentation";
+            this.presentationDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.presentationDataGridViewTextBoxColumn.Name = "presentationDataGridViewTextBoxColumn";
+            this.presentationDataGridViewTextBoxColumn.ReadOnly = true;
+            this.presentationDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // categorieDataGridViewTextBoxColumn
+            // 
+            this.categorieDataGridViewTextBoxColumn.DataPropertyName = "Categorie";
+            this.categorieDataGridViewTextBoxColumn.HeaderText = "Categorie";
+            this.categorieDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categorieDataGridViewTextBoxColumn.Name = "categorieDataGridViewTextBoxColumn";
+            this.categorieDataGridViewTextBoxColumn.ReadOnly = true;
+            this.categorieDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nutriscoreDataGridViewTextBoxColumn
+            // 
+            this.nutriscoreDataGridViewTextBoxColumn.DataPropertyName = "Nutriscore";
+            this.nutriscoreDataGridViewTextBoxColumn.HeaderText = "Nutriscore";
+            this.nutriscoreDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nutriscoreDataGridViewTextBoxColumn.Name = "nutriscoreDataGridViewTextBoxColumn";
+            this.nutriscoreDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nutriscoreDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // stockcourantDataGridViewTextBoxColumn
+            // 
+            this.stockcourantDataGridViewTextBoxColumn.DataPropertyName = "Stock_courant";
+            this.stockcourantDataGridViewTextBoxColumn.HeaderText = "Stock_courant";
+            this.stockcourantDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.stockcourantDataGridViewTextBoxColumn.Name = "stockcourantDataGridViewTextBoxColumn";
+            this.stockcourantDataGridViewTextBoxColumn.ReadOnly = true;
+            this.stockcourantDataGridViewTextBoxColumn.Width = 125;
             // 
             // produitBindingSource
             // 
@@ -176,99 +290,139 @@
             // comboBoxcategorie
             // 
             this.comboBoxcategorie.FormattingEnabled = true;
-            this.comboBoxcategorie.Location = new System.Drawing.Point(12, 468);
+            this.comboBoxcategorie.Location = new System.Drawing.Point(335, 32);
             this.comboBoxcategorie.Name = "comboBoxcategorie";
-            this.comboBoxcategorie.Size = new System.Drawing.Size(328, 24);
+            this.comboBoxcategorie.Size = new System.Drawing.Size(152, 24);
             this.comboBoxcategorie.TabIndex = 10;
             this.comboBoxcategorie.SelectedIndexChanged += new System.EventHandler(this.comboBoxcategorie_SelectedIndexChanged);
             // 
-            // stockcourantDataGridViewTextBoxColumn
+            // label1
             // 
-            this.stockcourantDataGridViewTextBoxColumn.DataPropertyName = "Stock_courant";
-            this.stockcourantDataGridViewTextBoxColumn.HeaderText = "Stock_courant";
-            this.stockcourantDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.stockcourantDataGridViewTextBoxColumn.Name = "stockcourantDataGridViewTextBoxColumn";
-            this.stockcourantDataGridViewTextBoxColumn.Width = 125;
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 434);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(348, 32);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Vu sur l\'ensemble des produits :";
             // 
-            // nutriscoreDataGridViewTextBoxColumn
+            // dataGridViewproduit
             // 
-            this.nutriscoreDataGridViewTextBoxColumn.DataPropertyName = "Nutriscore";
-            this.nutriscoreDataGridViewTextBoxColumn.HeaderText = "Nutriscore";
-            this.nutriscoreDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nutriscoreDataGridViewTextBoxColumn.Name = "nutriscoreDataGridViewTextBoxColumn";
-            this.nutriscoreDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewproduit.AllowUserToAddRows = false;
+            this.dataGridViewproduit.AllowUserToDeleteRows = false;
+            this.dataGridViewproduit.AutoGenerateColumns = false;
+            this.dataGridViewproduit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dataGridViewproduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewproduit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1});
+            this.dataGridViewproduit.DataSource = this.produitBindingSource;
+            this.dataGridViewproduit.GridColor = System.Drawing.Color.Black;
+            this.dataGridViewproduit.Location = new System.Drawing.Point(6, 42);
+            this.dataGridViewproduit.MultiSelect = false;
+            this.dataGridViewproduit.Name = "dataGridViewproduit";
+            this.dataGridViewproduit.ReadOnly = true;
+            this.dataGridViewproduit.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridViewproduit.RowTemplate.Height = 24;
+            this.dataGridViewproduit.Size = new System.Drawing.Size(251, 300);
+            this.dataGridViewproduit.TabIndex = 12;
             // 
-            // categorieDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.categorieDataGridViewTextBoxColumn.DataPropertyName = "Categorie";
-            this.categorieDataGridViewTextBoxColumn.HeaderText = "Categorie";
-            this.categorieDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categorieDataGridViewTextBoxColumn.Name = "categorieDataGridViewTextBoxColumn";
-            this.categorieDataGridViewTextBoxColumn.Width = 125;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Nom";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nom";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
             // 
-            // presentationDataGridViewTextBoxColumn
+            // choixcategorie
             // 
-            this.presentationDataGridViewTextBoxColumn.DataPropertyName = "Presentation";
-            this.presentationDataGridViewTextBoxColumn.HeaderText = "Presentation";
-            this.presentationDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.presentationDataGridViewTextBoxColumn.Name = "presentationDataGridViewTextBoxColumn";
-            this.presentationDataGridViewTextBoxColumn.Width = 125;
+            this.choixcategorie.AutoSize = true;
+            this.choixcategorie.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.choixcategorie.Location = new System.Drawing.Point(13, 27);
+            this.choixcategorie.Name = "choixcategorie";
+            this.choixcategorie.Size = new System.Drawing.Size(318, 27);
+            this.choixcategorie.TabIndex = 13;
+            this.choixcategorie.Text = "Je m\'intéresse que sur la catégorie";
             // 
-            // tVADataGridViewTextBoxColumn
+            // groupBox1
             // 
-            this.tVADataGridViewTextBoxColumn.DataPropertyName = "TVA";
-            this.tVADataGridViewTextBoxColumn.HeaderText = "TVA";
-            this.tVADataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tVADataGridViewTextBoxColumn.Name = "tVADataGridViewTextBoxColumn";
-            this.tVADataGridViewTextBoxColumn.Width = 125;
+            this.groupBox1.Controls.Add(this.quantite);
+            this.groupBox1.Controls.Add(this.dataGridViewproduit);
+            this.groupBox1.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(18, 62);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(1316, 369);
+            this.groupBox1.TabIndex = 14;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Produits : ";
             // 
-            // prixHTDataGridViewTextBoxColumn
+            // quantite
             // 
-            this.prixHTDataGridViewTextBoxColumn.DataPropertyName = "PrixHT";
-            this.prixHTDataGridViewTextBoxColumn.HeaderText = "PrixHT";
-            this.prixHTDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prixHTDataGridViewTextBoxColumn.Name = "prixHTDataGridViewTextBoxColumn";
-            this.prixHTDataGridViewTextBoxColumn.Width = 125;
+            this.quantite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.quantite.Controls.Add(this.buttonajoutquantite);
+            this.quantite.Controls.Add(this.textBox2);
+            this.quantite.Controls.Add(this.minimum);
+            this.quantite.Controls.Add(this.textBox1);
+            this.quantite.Controls.Add(this.actuel);
+            this.quantite.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantite.ForeColor = System.Drawing.Color.Black;
+            this.quantite.Location = new System.Drawing.Point(263, 42);
+            this.quantite.Name = "quantite";
+            this.quantite.Size = new System.Drawing.Size(548, 97);
+            this.quantite.TabIndex = 13;
+            this.quantite.TabStop = false;
+            this.quantite.Text = "Gestion De Quantite : ";
             // 
-            // tailleDataGridViewTextBoxColumn
+            // actuel
             // 
-            this.tailleDataGridViewTextBoxColumn.DataPropertyName = "Taille";
-            this.tailleDataGridViewTextBoxColumn.HeaderText = "Taille";
-            this.tailleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tailleDataGridViewTextBoxColumn.Name = "tailleDataGridViewTextBoxColumn";
-            this.tailleDataGridViewTextBoxColumn.Width = 125;
+            this.actuel.AutoSize = true;
+            this.actuel.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.actuel.Location = new System.Drawing.Point(26, 46);
+            this.actuel.Name = "actuel";
+            this.actuel.Size = new System.Drawing.Size(75, 26);
+            this.actuel.TabIndex = 0;
+            this.actuel.Text = "actuel : ";
+            this.actuel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // volumeDataGridViewTextBoxColumn
+            // produitBindingSource1
             // 
-            this.volumeDataGridViewTextBoxColumn.DataPropertyName = "Volume";
-            this.volumeDataGridViewTextBoxColumn.HeaderText = "Volume";
-            this.volumeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.volumeDataGridViewTextBoxColumn.Name = "volumeDataGridViewTextBoxColumn";
-            this.volumeDataGridViewTextBoxColumn.Width = 125;
+            this.produitBindingSource1.DataMember = "Produit";
+            this.produitBindingSource1.DataSource = this.franprixgestionDataSetBindingSource;
             // 
-            // poidsDataGridViewTextBoxColumn
+            // textBox1
             // 
-            this.poidsDataGridViewTextBoxColumn.DataPropertyName = "Poids";
-            this.poidsDataGridViewTextBoxColumn.HeaderText = "Poids";
-            this.poidsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.poidsDataGridViewTextBoxColumn.Name = "poidsDataGridViewTextBoxColumn";
-            this.poidsDataGridViewTextBoxColumn.Width = 125;
+            this.textBox1.Location = new System.Drawing.Point(92, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(78, 32);
+            this.textBox1.TabIndex = 1;
             // 
-            // marqueDataGridViewTextBoxColumn
+            // minimum
             // 
-            this.marqueDataGridViewTextBoxColumn.DataPropertyName = "Marque";
-            this.marqueDataGridViewTextBoxColumn.HeaderText = "Marque";
-            this.marqueDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.marqueDataGridViewTextBoxColumn.Name = "marqueDataGridViewTextBoxColumn";
-            this.marqueDataGridViewTextBoxColumn.Width = 125;
+            this.minimum.AutoSize = true;
+            this.minimum.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimum.Location = new System.Drawing.Point(176, 43);
+            this.minimum.Name = "minimum";
+            this.minimum.Size = new System.Drawing.Size(110, 26);
+            this.minimum.TabIndex = 2;
+            this.minimum.Text = "minimum : ";
             // 
-            // nomDataGridViewTextBoxColumn
+            // textBox2
             // 
-            this.nomDataGridViewTextBoxColumn.DataPropertyName = "Nom";
-            this.nomDataGridViewTextBoxColumn.HeaderText = "Nom";
-            this.nomDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
-            this.nomDataGridViewTextBoxColumn.Width = 125;
+            this.textBox2.Location = new System.Drawing.Point(277, 40);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(85, 32);
+            this.textBox2.TabIndex = 3;
+            // 
+            // buttonajoutquantite
+            // 
+            this.buttonajoutquantite.Location = new System.Drawing.Point(368, 36);
+            this.buttonajoutquantite.Name = "buttonajoutquantite";
+            this.buttonajoutquantite.Size = new System.Drawing.Size(112, 36);
+            this.buttonajoutquantite.TabIndex = 4;
+            this.buttonajoutquantite.Text = "Modifier";
+            this.buttonajoutquantite.UseVisualStyleBackColor = true;
             // 
             // gestionstock
             // 
@@ -276,6 +430,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1509, 785);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.choixcategorie);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBoxcategorie);
             this.Controls.Add(this.dataGridViewgestiondestock);
             this.Controls.Add(this.BtnModifier);
@@ -293,7 +450,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewgestiondestock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categorieBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduit)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.quantite.ResumeLayout(false);
+            this.quantite.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -323,5 +486,17 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn categorieDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nutriscoreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockcourantDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridViewproduit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Label choixcategorie;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox quantite;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label minimum;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label actuel;
+        private System.Windows.Forms.BindingSource produitBindingSource1;
+        private System.Windows.Forms.Button buttonajoutquantite;
     }
 }
