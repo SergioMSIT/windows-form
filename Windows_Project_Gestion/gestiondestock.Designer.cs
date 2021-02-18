@@ -53,11 +53,9 @@
             this.stockcourantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produitBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categorieBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.comboBoxcategorie = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewproduit = new System.Windows.Forms.DataGridView();
+            this.dataGridViewproduit2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.choixcategorie = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.quantite = new System.Windows.Forms.GroupBox();
             this.buttonajoutquantite = new System.Windows.Forms.Button();
@@ -66,29 +64,31 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.actuel = new System.Windows.Forms.Label();
             this.produitBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.allStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gereQuantiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parametreCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changerDeCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.textBoxSearch2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.comboBoxcategorie = new System.Windows.Forms.ComboBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprixgestionDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewgestiondestock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categorieBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduit2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.quantite.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1340, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(1338, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(195, 132);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -108,7 +108,7 @@
             // btnDeconnexion
             // 
             this.btnDeconnexion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeconnexion.Location = new System.Drawing.Point(1362, 140);
+            this.btnDeconnexion.Location = new System.Drawing.Point(1398, 150);
             this.btnDeconnexion.Name = "btnDeconnexion";
             this.btnDeconnexion.Size = new System.Drawing.Size(135, 39);
             this.btnDeconnexion.TabIndex = 6;
@@ -119,7 +119,7 @@
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(1362, 185);
+            this.btnAdd.Location = new System.Drawing.Point(1398, 195);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(135, 39);
             this.btnAdd.TabIndex = 7;
@@ -134,7 +134,7 @@
             // BtnModifier
             // 
             this.BtnModifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnModifier.Location = new System.Drawing.Point(1362, 230);
+            this.BtnModifier.Location = new System.Drawing.Point(1398, 240);
             this.BtnModifier.Name = "BtnModifier";
             this.BtnModifier.Size = new System.Drawing.Size(135, 39);
             this.BtnModifier.TabIndex = 8;
@@ -157,7 +157,8 @@
             // dataGridViewgestiondestock
             // 
             this.dataGridViewgestiondestock.AllowUserToOrderColumns = true;
-            this.dataGridViewgestiondestock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridViewgestiondestock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewgestiondestock.AutoGenerateColumns = false;
             this.dataGridViewgestiondestock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dataGridViewgestiondestock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -175,13 +176,13 @@
             this.stockcourantDataGridViewTextBoxColumn});
             this.dataGridViewgestiondestock.DataSource = this.produitBindingSource;
             this.dataGridViewgestiondestock.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewgestiondestock.Location = new System.Drawing.Point(12, 476);
+            this.dataGridViewgestiondestock.Location = new System.Drawing.Point(12, 533);
             this.dataGridViewgestiondestock.MultiSelect = false;
             this.dataGridViewgestiondestock.Name = "dataGridViewgestiondestock";
             this.dataGridViewgestiondestock.ReadOnly = true;
             this.dataGridViewgestiondestock.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridViewgestiondestock.RowTemplate.Height = 24;
-            this.dataGridViewgestiondestock.Size = new System.Drawing.Size(1485, 275);
+            this.dataGridViewgestiondestock.Size = new System.Drawing.Size(1521, 275);
             this.dataGridViewgestiondestock.TabIndex = 9;
             // 
             // nomDataGridViewTextBoxColumn
@@ -293,45 +294,37 @@
             this.categorieBindingSource.DataMember = "Categorie";
             this.categorieBindingSource.DataSource = this.franprixgestionDataSetBindingSource;
             // 
-            // comboBoxcategorie
-            // 
-            this.comboBoxcategorie.FormattingEnabled = true;
-            this.comboBoxcategorie.Location = new System.Drawing.Point(335, 32);
-            this.comboBoxcategorie.Name = "comboBoxcategorie";
-            this.comboBoxcategorie.Size = new System.Drawing.Size(152, 24);
-            this.comboBoxcategorie.TabIndex = 10;
-            this.comboBoxcategorie.SelectedIndexChanged += new System.EventHandler(this.comboBoxcategorie_SelectedIndexChanged);
-            // 
             // label1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 434);
+            this.label1.Location = new System.Drawing.Point(6, 482);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(348, 32);
             this.label1.TabIndex = 11;
             this.label1.Text = "Vu sur l\'ensemble des produits :";
             // 
-            // dataGridViewproduit
+            // dataGridViewproduit2
             // 
-            this.dataGridViewproduit.AllowUserToAddRows = false;
-            this.dataGridViewproduit.AllowUserToDeleteRows = false;
-            this.dataGridViewproduit.AutoGenerateColumns = false;
-            this.dataGridViewproduit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.dataGridViewproduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewproduit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewproduit2.AllowUserToAddRows = false;
+            this.dataGridViewproduit2.AllowUserToDeleteRows = false;
+            this.dataGridViewproduit2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridViewproduit2.AutoGenerateColumns = false;
+            this.dataGridViewproduit2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dataGridViewproduit2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewproduit2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1});
-            this.dataGridViewproduit.DataSource = this.produitBindingSource;
-            this.dataGridViewproduit.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewproduit.Location = new System.Drawing.Point(6, 42);
-            this.dataGridViewproduit.MultiSelect = false;
-            this.dataGridViewproduit.Name = "dataGridViewproduit";
-            this.dataGridViewproduit.ReadOnly = true;
-            this.dataGridViewproduit.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridViewproduit.RowTemplate.Height = 24;
-            this.dataGridViewproduit.Size = new System.Drawing.Size(251, 300);
-            this.dataGridViewproduit.TabIndex = 12;
+            this.dataGridViewproduit2.DataSource = this.produitBindingSource;
+            this.dataGridViewproduit2.GridColor = System.Drawing.Color.Black;
+            this.dataGridViewproduit2.Location = new System.Drawing.Point(6, 40);
+            this.dataGridViewproduit2.MultiSelect = false;
+            this.dataGridViewproduit2.Name = "dataGridViewproduit2";
+            this.dataGridViewproduit2.ReadOnly = true;
+            this.dataGridViewproduit2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridViewproduit2.RowTemplate.Height = 24;
+            this.dataGridViewproduit2.Size = new System.Drawing.Size(251, 283);
+            this.dataGridViewproduit2.TabIndex = 12;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -342,22 +335,12 @@
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Width = 125;
             // 
-            // choixcategorie
-            // 
-            this.choixcategorie.AutoSize = true;
-            this.choixcategorie.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choixcategorie.Location = new System.Drawing.Point(13, 27);
-            this.choixcategorie.Name = "choixcategorie";
-            this.choixcategorie.Size = new System.Drawing.Size(318, 27);
-            this.choixcategorie.TabIndex = 13;
-            this.choixcategorie.Text = "Je m\'intéresse que sur la catégorie";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.quantite);
-            this.groupBox1.Controls.Add(this.dataGridViewproduit);
+            this.groupBox1.Controls.Add(this.dataGridViewproduit2);
             this.groupBox1.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(18, 62);
+            this.groupBox1.Location = new System.Drawing.Point(12, 110);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1316, 369);
             this.groupBox1.TabIndex = 14;
@@ -374,16 +357,16 @@
             this.quantite.Controls.Add(this.actuel);
             this.quantite.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantite.ForeColor = System.Drawing.Color.Black;
-            this.quantite.Location = new System.Drawing.Point(263, 42);
+            this.quantite.Location = new System.Drawing.Point(263, 40);
             this.quantite.Name = "quantite";
-            this.quantite.Size = new System.Drawing.Size(548, 97);
+            this.quantite.Size = new System.Drawing.Size(1053, 97);
             this.quantite.TabIndex = 13;
             this.quantite.TabStop = false;
             this.quantite.Text = "Gestion De Quantite : ";
             // 
             // buttonajoutquantite
             // 
-            this.buttonajoutquantite.Location = new System.Drawing.Point(368, 36);
+            this.buttonajoutquantite.Location = new System.Drawing.Point(430, 38);
             this.buttonajoutquantite.Name = "buttonajoutquantite";
             this.buttonajoutquantite.Size = new System.Drawing.Size(112, 36);
             this.buttonajoutquantite.TabIndex = 4;
@@ -392,7 +375,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(277, 40);
+            this.textBox2.Location = new System.Drawing.Point(306, 42);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(85, 32);
             this.textBox2.TabIndex = 3;
@@ -401,7 +384,7 @@
             // 
             this.minimum.AutoSize = true;
             this.minimum.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minimum.Location = new System.Drawing.Point(176, 43);
+            this.minimum.Location = new System.Drawing.Point(190, 45);
             this.minimum.Name = "minimum";
             this.minimum.Size = new System.Drawing.Size(110, 26);
             this.minimum.TabIndex = 2;
@@ -409,7 +392,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 40);
+            this.textBox1.Location = new System.Drawing.Point(106, 42);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(78, 32);
             this.textBox1.TabIndex = 1;
@@ -430,63 +413,97 @@
             this.produitBindingSource1.DataMember = "Produit";
             this.produitBindingSource1.DataSource = this.franprixgestionDataSetBindingSource;
             // 
-            // menuStrip1
+            // groupBox2
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.allStockToolStripMenuItem,
-            this.gereQuantiterToolStripMenuItem,
-            this.parametreCompteToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1509, 28);
-            this.menuStrip1.TabIndex = 15;
-            this.menuStrip1.Text = "menuStrip1";
+            this.groupBox2.Controls.Add(this.textBoxSearch2);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.comboBoxcategorie);
+            this.groupBox2.Controls.Add(this.textBoxSearch);
+            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1316, 58);
+            this.groupBox2.TabIndex = 28;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Recherche :";
             // 
-            // allStockToolStripMenuItem
+            // textBoxSearch2
             // 
-            this.allStockToolStripMenuItem.Name = "allStockToolStripMenuItem";
-            this.allStockToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
-            this.allStockToolStripMenuItem.Text = "all stock";
+            this.textBoxSearch2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxSearch2.Location = new System.Drawing.Point(582, 20);
+            this.textBoxSearch2.Name = "textBoxSearch2";
+            this.textBoxSearch2.Size = new System.Drawing.Size(147, 22);
+            this.textBoxSearch2.TabIndex = 33;
             // 
-            // gereQuantiterToolStripMenuItem
+            // label3
             // 
-            this.gereQuantiterToolStripMenuItem.Name = "gereQuantiterToolStripMenuItem";
-            this.gereQuantiterToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
-            this.gereQuantiterToolStripMenuItem.Text = "gere quantiter";
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(496, 20);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 20);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Marque : ";
             // 
-            // parametreCompteToolStripMenuItem
+            // label2
             // 
-            this.parametreCompteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.changerDeCompteToolStripMenuItem});
-            this.parametreCompteToolStripMenuItem.Name = "parametreCompteToolStripMenuItem";
-            this.parametreCompteToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
-            this.parametreCompteToolStripMenuItem.Text = "parametre compte ";
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(283, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.TabIndex = 31;
+            this.label2.Text = "Nom :";
             // 
-            // changerDeCompteToolStripMenuItem
+            // label4
             // 
-            this.changerDeCompteToolStripMenuItem.Name = "changerDeCompteToolStripMenuItem";
-            this.changerDeCompteToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.changerDeCompteToolStripMenuItem.Text = "changer de compte ";
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(28, 20);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(91, 20);
+            this.label4.TabIndex = 29;
+            this.label4.Text = "Catégorie :";
+            // 
+            // comboBoxcategorie
+            // 
+            this.comboBoxcategorie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.comboBoxcategorie.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.produitBindingSource, "Categorie", true));
+            this.comboBoxcategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxcategorie.FormattingEnabled = true;
+            this.comboBoxcategorie.Location = new System.Drawing.Point(130, 16);
+            this.comboBoxcategorie.Name = "comboBoxcategorie";
+            this.comboBoxcategorie.Size = new System.Drawing.Size(147, 24);
+            this.comboBoxcategorie.TabIndex = 28;
+            this.comboBoxcategorie.SelectedIndexChanged += new System.EventHandler(this.comboBoxcategorie_SelectedIndexChanged);
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxSearch.Location = new System.Drawing.Point(343, 20);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(147, 22);
+            this.textBoxSearch.TabIndex = 30;
             // 
             // gestionstock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1509, 785);
+            this.ClientSize = new System.Drawing.Size(1545, 820);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.choixcategorie);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBoxcategorie);
             this.Controls.Add(this.dataGridViewgestiondestock);
             this.Controls.Add(this.BtnModifier);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDeconnexion);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "gestionstock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "gestion de stock";
@@ -497,13 +514,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewgestiondestock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categorieBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduit2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.quantite.ResumeLayout(false);
             this.quantite.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -523,7 +540,6 @@
         private System.Windows.Forms.DataGridView dataGridViewgestiondestock;
         private System.Windows.Forms.BindingSource produitBindingSource;
         private System.Windows.Forms.BindingSource categorieBindingSource;
-        private System.Windows.Forms.ComboBox comboBoxcategorie;
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn marqueDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn poidsDataGridViewTextBoxColumn;
@@ -536,9 +552,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nutriscoreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockcourantDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewproduit;
+        private System.Windows.Forms.DataGridView dataGridViewproduit2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.Label choixcategorie;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox quantite;
         private System.Windows.Forms.TextBox textBox2;
@@ -547,10 +562,12 @@
         private System.Windows.Forms.Label actuel;
         private System.Windows.Forms.BindingSource produitBindingSource1;
         private System.Windows.Forms.Button buttonajoutquantite;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem allStockToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gereQuantiterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem parametreCompteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changerDeCompteToolStripMenuItem;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox textBoxSearch2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
+        protected System.Windows.Forms.ComboBox comboBoxcategorie;
+        private System.Windows.Forms.TextBox textBoxSearch;
     }
 }

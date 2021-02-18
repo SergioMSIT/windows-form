@@ -47,6 +47,17 @@ namespace Windows_Project_GestionPAGE1
         {
             produitBindingSource.Filter = "Categorie = " + (comboBoxcategorie.SelectedIndex + 1);
         }
+       
+
+        private void textBoxSearchnom_TextChanged(object sender, EventArgs e)
+        {
+            produitBindingSource.Filter = "Nom like '" + textBoxSearch.Text + "%'";
+        }
+
+        private void textBoxSearchmarque_TextChanged(object sender, EventArgs e)
+        {
+            produitBindingSource.Filter = "Marque like '" + textBoxSearch2.Text + "%'";
+        }
     }
 }
 
