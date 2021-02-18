@@ -29,6 +29,7 @@ namespace Windows_Project_GestionPAGE1
         /// </summary>
         private void InitializeComponent()
         {
+
             this.btnModifier = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
@@ -384,11 +385,13 @@ namespace Windows_Project_GestionPAGE1
             this.Text = "Modifier un produit";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
 
         private System.Windows.Forms.Button btnModifier;
         private System.Windows.Forms.Button btnDelete;
@@ -421,5 +424,6 @@ namespace Windows_Project_GestionPAGE1
         private System.Windows.Forms.RichTextBox richTextBoxPresentation;
         private System.Windows.Forms.ComboBox comboBoxCategorie;
         private System.Windows.Forms.GroupBox groupBox1;
+
     }
 }
