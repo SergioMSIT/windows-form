@@ -60,12 +60,17 @@
             this.choixcategorie = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.quantite = new System.Windows.Forms.GroupBox();
+            this.buttonajoutquantite = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.minimum = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.actuel = new System.Windows.Forms.Label();
             this.produitBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.minimum = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.buttonajoutquantite = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.allStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.gereQuantiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.parametreCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.changerDeCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprixgestionDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
@@ -76,6 +81,7 @@
             this.groupBox1.SuspendLayout();
             this.quantite.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -375,6 +381,39 @@
             this.quantite.TabStop = false;
             this.quantite.Text = "Gestion De Quantite : ";
             // 
+            // buttonajoutquantite
+            // 
+            this.buttonajoutquantite.Location = new System.Drawing.Point(368, 36);
+            this.buttonajoutquantite.Name = "buttonajoutquantite";
+            this.buttonajoutquantite.Size = new System.Drawing.Size(112, 36);
+            this.buttonajoutquantite.TabIndex = 4;
+            this.buttonajoutquantite.Text = "Modifier";
+            this.buttonajoutquantite.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(277, 40);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(85, 32);
+            this.textBox2.TabIndex = 3;
+            // 
+            // minimum
+            // 
+            this.minimum.AutoSize = true;
+            this.minimum.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.minimum.Location = new System.Drawing.Point(176, 43);
+            this.minimum.Name = "minimum";
+            this.minimum.Size = new System.Drawing.Size(110, 26);
+            this.minimum.TabIndex = 2;
+            this.minimum.Text = "minimum : ";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(92, 40);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(78, 32);
+            this.textBox1.TabIndex = 1;
+            // 
             // actuel
             // 
             this.actuel.AutoSize = true;
@@ -391,38 +430,44 @@
             this.produitBindingSource1.DataMember = "Produit";
             this.produitBindingSource1.DataSource = this.franprixgestionDataSetBindingSource;
             // 
-            // textBox1
+            // menuStrip1
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(78, 32);
-            this.textBox1.TabIndex = 1;
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.allStockToolStripMenuItem,
+            this.gereQuantiterToolStripMenuItem,
+            this.parametreCompteToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1509, 28);
+            this.menuStrip1.TabIndex = 15;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // minimum
+            // allStockToolStripMenuItem
             // 
-            this.minimum.AutoSize = true;
-            this.minimum.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minimum.Location = new System.Drawing.Point(176, 43);
-            this.minimum.Name = "minimum";
-            this.minimum.Size = new System.Drawing.Size(110, 26);
-            this.minimum.TabIndex = 2;
-            this.minimum.Text = "minimum : ";
+            this.allStockToolStripMenuItem.Name = "allStockToolStripMenuItem";
+            this.allStockToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
+            this.allStockToolStripMenuItem.Text = "all stock";
             // 
-            // textBox2
+            // gereQuantiterToolStripMenuItem
             // 
-            this.textBox2.Location = new System.Drawing.Point(277, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(85, 32);
-            this.textBox2.TabIndex = 3;
+            this.gereQuantiterToolStripMenuItem.Name = "gereQuantiterToolStripMenuItem";
+            this.gereQuantiterToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
+            this.gereQuantiterToolStripMenuItem.Text = "gere quantiter";
             // 
-            // buttonajoutquantite
+            // parametreCompteToolStripMenuItem
             // 
-            this.buttonajoutquantite.Location = new System.Drawing.Point(368, 36);
-            this.buttonajoutquantite.Name = "buttonajoutquantite";
-            this.buttonajoutquantite.Size = new System.Drawing.Size(112, 36);
-            this.buttonajoutquantite.TabIndex = 4;
-            this.buttonajoutquantite.Text = "Modifier";
-            this.buttonajoutquantite.UseVisualStyleBackColor = true;
+            this.parametreCompteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.changerDeCompteToolStripMenuItem});
+            this.parametreCompteToolStripMenuItem.Name = "parametreCompteToolStripMenuItem";
+            this.parametreCompteToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
+            this.parametreCompteToolStripMenuItem.Text = "parametre compte ";
+            // 
+            // changerDeCompteToolStripMenuItem
+            // 
+            this.changerDeCompteToolStripMenuItem.Name = "changerDeCompteToolStripMenuItem";
+            this.changerDeCompteToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
+            this.changerDeCompteToolStripMenuItem.Text = "changer de compte ";
             // 
             // gestionstock
             // 
@@ -439,7 +484,9 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDeconnexion);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "gestionstock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "gestion de stock";
@@ -455,6 +502,8 @@
             this.quantite.ResumeLayout(false);
             this.quantite.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -498,5 +547,10 @@
         private System.Windows.Forms.Label actuel;
         private System.Windows.Forms.BindingSource produitBindingSource1;
         private System.Windows.Forms.Button buttonajoutquantite;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem allStockToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem gereQuantiterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem parametreCompteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem changerDeCompteToolStripMenuItem;
     }
 }
