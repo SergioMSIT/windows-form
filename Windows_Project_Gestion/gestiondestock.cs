@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace Windows_Project_GestionPAGE1
 {
@@ -9,6 +10,8 @@ namespace Windows_Project_GestionPAGE1
         {
             InitializeComponent();
         }
+
+        public string cs = @"Server = .\SQLEXPRESS; Database = Franprix_gestion; Trusted_Connection = True;";
 
         private void gestionstock_Load(object sender, EventArgs e)
         {
@@ -35,26 +38,27 @@ namespace Windows_Project_GestionPAGE1
         {
             AddProduct addprod = new AddProduct();
             addprod.ShowDialog();
+           
         }
 
-        private void BtnModifier_Click(object sender, EventArgs e)
-        {
-            ModifierUnProduit update  = new ModifierUnProduit();
-            update.ShowDialog();
-        }
+        
 
         private void comboBoxcategorie_SelectedIndexChanged(object sender, EventArgs e)
         {
             produitBindingSource.Filter = "Categorie = " + (comboBoxcategorie.SelectedIndex + 1);
         }
+
        
 
         private void textBoxSearchnom_TextChanged(object sender, EventArgs e)
+
         {
             produitBindingSource.Filter = "Nom like '" + textBoxSearch.Text + "%'";
         }
 
+
         private void textBoxSearchmarque_TextChanged(object sender, EventArgs e)
+
         {
             produitBindingSource.Filter = "Marque like '" + textBoxSearch2.Text + "%'";
         }
