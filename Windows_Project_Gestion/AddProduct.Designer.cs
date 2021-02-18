@@ -85,6 +85,7 @@ namespace Windows_Project_GestionPAGE1
             this.textNom.Name = "textNom";
             this.textNom.Size = new System.Drawing.Size(100, 22);
             this.textNom.TabIndex = 7;
+            this.textNom.TextChanged += new System.EventHandler(this.textNom_TextChanged);
             // 
             // groupBox1
             // 
@@ -133,7 +134,6 @@ namespace Windows_Project_GestionPAGE1
             this.comboBoxCategorie.Size = new System.Drawing.Size(100, 24);
             this.comboBoxCategorie.TabIndex = 35;
             this.comboBoxCategorie.ValueMember = "ID";
-  
             // 
             // bindingSource1
             // 
