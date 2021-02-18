@@ -435,6 +435,7 @@
             this.textBoxSearch2.Name = "textBoxSearch2";
             this.textBoxSearch2.Size = new System.Drawing.Size(147, 22);
             this.textBoxSearch2.TabIndex = 33;
+            this.textBoxSearch2.TextChanged += new System.EventHandler(this.textBoxSearchmarque_TextChanged);
             // 
             // label3
             // 
@@ -488,6 +489,7 @@
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(147, 22);
             this.textBoxSearch.TabIndex = 30;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearchnom_TextChanged);
             // 
             // gestionstock
             // 

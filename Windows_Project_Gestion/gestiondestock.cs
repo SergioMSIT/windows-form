@@ -12,20 +12,30 @@ namespace Windows_Project_GestionPAGE1
 
         private void gestionstock_Load(object sender, EventArgs e)
         {
+            // les 2 tableux des produits 
+
             // TODO: cette ligne de code charge les données dans la table 'franprix_gestionDataSet.Produit'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.produitTableAdapter.Fill(this.franprix_gestionDataSet.Produit);
             // TODO: cette ligne de code charge les données dans la table 'franprix_gestionDataSet.Categorie'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.categorieTableAdapter.Fill(this.franprix_gestionDataSet.Categorie);
             int nb = this.franprix_gestionDataSet.Categorie.Rows.Count;
-
+            
+            
+            
+            //la data du selecte 
             comboBoxcategorie.Items.Clear();
             for (int i = 0; i < nb; i++)
             {
                 string str = this.franprix_gestionDataSet.Categorie.Rows[i].ItemArray[1].ToString();
                 comboBoxcategorie.Items.Add(str);
             }
-        }
 
+
+
+
+
+        }
+        // bouton  deconnexion / addproduit/modifier 
         private void btnDeconnexion_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -42,7 +52,7 @@ namespace Windows_Project_GestionPAGE1
             ModifierUnProduit update  = new ModifierUnProduit();
             update.ShowDialog();
         }
-
+        //tout les filtre / recherche produit 
         private void comboBoxcategorie_SelectedIndexChanged(object sender, EventArgs e)
         {
             produitBindingSource.Filter = "Categorie = " + (comboBoxcategorie.SelectedIndex + 1);
@@ -58,6 +68,8 @@ namespace Windows_Project_GestionPAGE1
         {
             produitBindingSource.Filter = "Marque like '" + textBoxSearch2.Text + "%'";
         }
+
+       
     }
 }
 
