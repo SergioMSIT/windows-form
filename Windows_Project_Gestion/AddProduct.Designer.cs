@@ -121,7 +121,6 @@ namespace Windows_Project_GestionPAGE1
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ajouter un produit";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // comboBoxCategorie
             // 

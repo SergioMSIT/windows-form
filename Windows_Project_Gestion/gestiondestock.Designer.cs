@@ -30,70 +30,77 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gestionstock));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.franprixgestionDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.franprix_gestionDataSet = new Windows_Project_GestionPAGE1.Franprix_gestionDataSet();
             this.btnDeconnexion = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.categorieTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.CategorieTableAdapter();
-            this.BtnModifier = new System.Windows.Forms.Button();
             this.tableAdapterManager1 = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.TableAdapterManager();
             this.produitTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.ProduitTableAdapter();
-            this.dataGridViewgestiondestock = new System.Windows.Forms.DataGridView();
-            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.marqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.poidsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.volumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tailleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.prixHTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.presentationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categorieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nutriscoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stockcourantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.produitBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categorieBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnsavebase = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.fKProduitCategorieBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.presentationDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock_minimum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stockcourantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock_max = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nutriscoreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.categorieDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tVADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.prixHTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tailleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.volumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.poidsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.marqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewgestiondestock = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.comboBoxcategorie = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewproduit = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.choixcategorie = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxSearch2 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.quantite = new System.Windows.Forms.GroupBox();
-            this.buttonajoutquantite = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.minimum = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.actuel = new System.Windows.Forms.Label();
-            this.produitBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.allStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.gereQuantiterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.parametreCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.changerDeCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.textNom = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textMarque = new System.Windows.Forms.TextBox();
+            this.textPoids = new System.Windows.Forms.TextBox();
+            this.textStockmini = new System.Windows.Forms.TextBox();
+            this.textStockcourant = new System.Windows.Forms.TextBox();
+            this.textStockmax = new System.Windows.Forms.TextBox();
+            this.textPrixht = new System.Windows.Forms.TextBox();
+            this.textTaille = new System.Windows.Forms.TextBox();
+            this.textVolume = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.comboBoxNutriscore = new System.Windows.Forms.ComboBox();
+            this.comboBoxTVA = new System.Windows.Forms.ComboBox();
+            this.richTextBoxPresentation = new System.Windows.Forms.RichTextBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.franprixgestionDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewgestiondestock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categorieBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKProduitCategorieBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewgestiondestock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.quantite.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1340, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // franprixgestionDataSetBindingSource
             // 
@@ -108,39 +115,18 @@
             // btnDeconnexion
             // 
             this.btnDeconnexion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeconnexion.Location = new System.Drawing.Point(1362, 140);
+            this.btnDeconnexion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeconnexion.Location = new System.Drawing.Point(1523, 12);
             this.btnDeconnexion.Name = "btnDeconnexion";
-            this.btnDeconnexion.Size = new System.Drawing.Size(135, 39);
+            this.btnDeconnexion.Size = new System.Drawing.Size(158, 57);
             this.btnDeconnexion.TabIndex = 6;
             this.btnDeconnexion.Text = "Deconnexion";
             this.btnDeconnexion.UseVisualStyleBackColor = true;
             this.btnDeconnexion.Click += new System.EventHandler(this.btnDeconnexion_Click);
             // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(1362, 185);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(135, 39);
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.Text = "Ajouter un produit";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // categorieTableAdapter
             // 
             this.categorieTableAdapter.ClearBeforeFill = true;
-            // 
-            // BtnModifier
-            // 
-            this.BtnModifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnModifier.Location = new System.Drawing.Point(1362, 230);
-            this.BtnModifier.Name = "BtnModifier";
-            this.BtnModifier.Size = new System.Drawing.Size(135, 39);
-            this.BtnModifier.TabIndex = 8;
-            this.BtnModifier.Text = "Modifer ce produit";
-            this.BtnModifier.UseVisualStyleBackColor = true;
-            this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
             // 
             // tableAdapterManager1
             // 
@@ -154,10 +140,146 @@
             // 
             this.produitTableAdapter.ClearBeforeFill = true;
             // 
+            // produitBindingSource
+            // 
+            this.produitBindingSource.DataMember = "Produit";
+            this.produitBindingSource.DataSource = this.franprixgestionDataSetBindingSource;
+            // 
+            // categorieBindingSource
+            // 
+            this.categorieBindingSource.DataMember = "Categorie";
+            this.categorieBindingSource.DataSource = this.franprixgestionDataSetBindingSource;
+            // 
+            // btnsavebase
+            // 
+            this.btnsavebase.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnsavebase.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsavebase.Location = new System.Drawing.Point(1523, 75);
+            this.btnsavebase.Name = "btnsavebase";
+            this.btnsavebase.Size = new System.Drawing.Size(158, 57);
+            this.btnsavebase.TabIndex = 17;
+            this.btnsavebase.Text = "Sauvegarder";
+            this.btnsavebase.UseVisualStyleBackColor = true;
+            this.btnsavebase.Click += new System.EventHandler(this.btnsavebase_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // fKProduitCategorieBindingSource
+            // 
+            this.fKProduitCategorieBindingSource.DataMember = "FK_Produit_Categorie";
+            this.fKProduitCategorieBindingSource.DataSource = this.categorieBindingSource;
+            // 
+            // presentationDataGridViewTextBoxColumn
+            // 
+            this.presentationDataGridViewTextBoxColumn.DataPropertyName = "Presentation";
+            this.presentationDataGridViewTextBoxColumn.HeaderText = "Presentation";
+            this.presentationDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.presentationDataGridViewTextBoxColumn.Name = "presentationDataGridViewTextBoxColumn";
+            this.presentationDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // Stock_minimum
+            // 
+            this.Stock_minimum.DataPropertyName = "Stock_minimum";
+            this.Stock_minimum.HeaderText = "Stock_minimum";
+            this.Stock_minimum.MinimumWidth = 6;
+            this.Stock_minimum.Name = "Stock_minimum";
+            this.Stock_minimum.Width = 125;
+            // 
+            // stockcourantDataGridViewTextBoxColumn
+            // 
+            this.stockcourantDataGridViewTextBoxColumn.DataPropertyName = "Stock_courant";
+            this.stockcourantDataGridViewTextBoxColumn.HeaderText = "Stock_courant";
+            this.stockcourantDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.stockcourantDataGridViewTextBoxColumn.Name = "stockcourantDataGridViewTextBoxColumn";
+            this.stockcourantDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // Stock_max
+            // 
+            this.Stock_max.DataPropertyName = "Stock_max";
+            this.Stock_max.HeaderText = "Stock_max";
+            this.Stock_max.MinimumWidth = 6;
+            this.Stock_max.Name = "Stock_max";
+            this.Stock_max.Width = 125;
+            // 
+            // nutriscoreDataGridViewTextBoxColumn
+            // 
+            this.nutriscoreDataGridViewTextBoxColumn.DataPropertyName = "Nutriscore";
+            this.nutriscoreDataGridViewTextBoxColumn.HeaderText = "Nutriscore";
+            this.nutriscoreDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nutriscoreDataGridViewTextBoxColumn.Name = "nutriscoreDataGridViewTextBoxColumn";
+            this.nutriscoreDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // categorieDataGridViewTextBoxColumn
+            // 
+            this.categorieDataGridViewTextBoxColumn.DataPropertyName = "Categorie";
+            this.categorieDataGridViewTextBoxColumn.HeaderText = "Categorie";
+            this.categorieDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.categorieDataGridViewTextBoxColumn.Name = "categorieDataGridViewTextBoxColumn";
+            this.categorieDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tVADataGridViewTextBoxColumn
+            // 
+            this.tVADataGridViewTextBoxColumn.DataPropertyName = "TVA";
+            this.tVADataGridViewTextBoxColumn.HeaderText = "TVA";
+            this.tVADataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tVADataGridViewTextBoxColumn.Name = "tVADataGridViewTextBoxColumn";
+            this.tVADataGridViewTextBoxColumn.Width = 125;
+            // 
+            // prixHTDataGridViewTextBoxColumn
+            // 
+            this.prixHTDataGridViewTextBoxColumn.DataPropertyName = "PrixHT";
+            this.prixHTDataGridViewTextBoxColumn.HeaderText = "PrixHT";
+            this.prixHTDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.prixHTDataGridViewTextBoxColumn.Name = "prixHTDataGridViewTextBoxColumn";
+            this.prixHTDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tailleDataGridViewTextBoxColumn
+            // 
+            this.tailleDataGridViewTextBoxColumn.DataPropertyName = "Taille";
+            this.tailleDataGridViewTextBoxColumn.HeaderText = "Taille";
+            this.tailleDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tailleDataGridViewTextBoxColumn.Name = "tailleDataGridViewTextBoxColumn";
+            this.tailleDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // volumeDataGridViewTextBoxColumn
+            // 
+            this.volumeDataGridViewTextBoxColumn.DataPropertyName = "Volume";
+            this.volumeDataGridViewTextBoxColumn.HeaderText = "Volume";
+            this.volumeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.volumeDataGridViewTextBoxColumn.Name = "volumeDataGridViewTextBoxColumn";
+            this.volumeDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // poidsDataGridViewTextBoxColumn
+            // 
+            this.poidsDataGridViewTextBoxColumn.DataPropertyName = "Poids";
+            this.poidsDataGridViewTextBoxColumn.HeaderText = "Poids";
+            this.poidsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.poidsDataGridViewTextBoxColumn.Name = "poidsDataGridViewTextBoxColumn";
+            this.poidsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // marqueDataGridViewTextBoxColumn
+            // 
+            this.marqueDataGridViewTextBoxColumn.DataPropertyName = "Marque";
+            this.marqueDataGridViewTextBoxColumn.HeaderText = "Marque";
+            this.marqueDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.marqueDataGridViewTextBoxColumn.Name = "marqueDataGridViewTextBoxColumn";
+            this.marqueDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nomDataGridViewTextBoxColumn
+            // 
+            this.nomDataGridViewTextBoxColumn.DataPropertyName = "Nom";
+            this.nomDataGridViewTextBoxColumn.HeaderText = "Nom";
+            this.nomDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
+            this.nomDataGridViewTextBoxColumn.Width = 125;
+            // 
             // dataGridViewgestiondestock
             // 
             this.dataGridViewgestiondestock.AllowUserToOrderColumns = true;
-            this.dataGridViewgestiondestock.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewgestiondestock.AutoGenerateColumns = false;
             this.dataGridViewgestiondestock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.dataGridViewgestiondestock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -169,388 +291,478 @@
             this.tailleDataGridViewTextBoxColumn,
             this.prixHTDataGridViewTextBoxColumn,
             this.tVADataGridViewTextBoxColumn,
-            this.presentationDataGridViewTextBoxColumn,
             this.categorieDataGridViewTextBoxColumn,
             this.nutriscoreDataGridViewTextBoxColumn,
-            this.stockcourantDataGridViewTextBoxColumn});
+            this.Stock_max,
+            this.stockcourantDataGridViewTextBoxColumn,
+            this.Stock_minimum,
+            this.presentationDataGridViewTextBoxColumn});
             this.dataGridViewgestiondestock.DataSource = this.produitBindingSource;
+            this.dataGridViewgestiondestock.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridViewgestiondestock.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke;
             this.dataGridViewgestiondestock.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewgestiondestock.Location = new System.Drawing.Point(12, 476);
+            this.dataGridViewgestiondestock.Location = new System.Drawing.Point(0, 523);
             this.dataGridViewgestiondestock.MultiSelect = false;
             this.dataGridViewgestiondestock.Name = "dataGridViewgestiondestock";
-            this.dataGridViewgestiondestock.ReadOnly = true;
             this.dataGridViewgestiondestock.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridViewgestiondestock.RowTemplate.Height = 24;
-            this.dataGridViewgestiondestock.Size = new System.Drawing.Size(1485, 275);
+            this.dataGridViewgestiondestock.Size = new System.Drawing.Size(1693, 262);
             this.dataGridViewgestiondestock.TabIndex = 9;
             // 
-            // nomDataGridViewTextBoxColumn
+            // pictureBox1
             // 
-            this.nomDataGridViewTextBoxColumn.DataPropertyName = "Nom";
-            this.nomDataGridViewTextBoxColumn.HeaderText = "Nom";
-            this.nomDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
-            this.nomDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nomDataGridViewTextBoxColumn.Width = 125;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(145, 101);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
-            // marqueDataGridViewTextBoxColumn
+            // textBoxSearch
             // 
-            this.marqueDataGridViewTextBoxColumn.DataPropertyName = "Marque";
-            this.marqueDataGridViewTextBoxColumn.HeaderText = "Marque";
-            this.marqueDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.marqueDataGridViewTextBoxColumn.Name = "marqueDataGridViewTextBoxColumn";
-            this.marqueDataGridViewTextBoxColumn.ReadOnly = true;
-            this.marqueDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // poidsDataGridViewTextBoxColumn
-            // 
-            this.poidsDataGridViewTextBoxColumn.DataPropertyName = "Poids";
-            this.poidsDataGridViewTextBoxColumn.HeaderText = "Poids";
-            this.poidsDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.poidsDataGridViewTextBoxColumn.Name = "poidsDataGridViewTextBoxColumn";
-            this.poidsDataGridViewTextBoxColumn.ReadOnly = true;
-            this.poidsDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // volumeDataGridViewTextBoxColumn
-            // 
-            this.volumeDataGridViewTextBoxColumn.DataPropertyName = "Volume";
-            this.volumeDataGridViewTextBoxColumn.HeaderText = "Volume";
-            this.volumeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.volumeDataGridViewTextBoxColumn.Name = "volumeDataGridViewTextBoxColumn";
-            this.volumeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.volumeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tailleDataGridViewTextBoxColumn
-            // 
-            this.tailleDataGridViewTextBoxColumn.DataPropertyName = "Taille";
-            this.tailleDataGridViewTextBoxColumn.HeaderText = "Taille";
-            this.tailleDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tailleDataGridViewTextBoxColumn.Name = "tailleDataGridViewTextBoxColumn";
-            this.tailleDataGridViewTextBoxColumn.ReadOnly = true;
-            this.tailleDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // prixHTDataGridViewTextBoxColumn
-            // 
-            this.prixHTDataGridViewTextBoxColumn.DataPropertyName = "PrixHT";
-            this.prixHTDataGridViewTextBoxColumn.HeaderText = "PrixHT";
-            this.prixHTDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.prixHTDataGridViewTextBoxColumn.Name = "prixHTDataGridViewTextBoxColumn";
-            this.prixHTDataGridViewTextBoxColumn.ReadOnly = true;
-            this.prixHTDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // tVADataGridViewTextBoxColumn
-            // 
-            this.tVADataGridViewTextBoxColumn.DataPropertyName = "TVA";
-            this.tVADataGridViewTextBoxColumn.HeaderText = "TVA";
-            this.tVADataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tVADataGridViewTextBoxColumn.Name = "tVADataGridViewTextBoxColumn";
-            this.tVADataGridViewTextBoxColumn.ReadOnly = true;
-            this.tVADataGridViewTextBoxColumn.Width = 125;
-            // 
-            // presentationDataGridViewTextBoxColumn
-            // 
-            this.presentationDataGridViewTextBoxColumn.DataPropertyName = "Presentation";
-            this.presentationDataGridViewTextBoxColumn.HeaderText = "Presentation";
-            this.presentationDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.presentationDataGridViewTextBoxColumn.Name = "presentationDataGridViewTextBoxColumn";
-            this.presentationDataGridViewTextBoxColumn.ReadOnly = true;
-            this.presentationDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // categorieDataGridViewTextBoxColumn
-            // 
-            this.categorieDataGridViewTextBoxColumn.DataPropertyName = "Categorie";
-            this.categorieDataGridViewTextBoxColumn.HeaderText = "Categorie";
-            this.categorieDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categorieDataGridViewTextBoxColumn.Name = "categorieDataGridViewTextBoxColumn";
-            this.categorieDataGridViewTextBoxColumn.ReadOnly = true;
-            this.categorieDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nutriscoreDataGridViewTextBoxColumn
-            // 
-            this.nutriscoreDataGridViewTextBoxColumn.DataPropertyName = "Nutriscore";
-            this.nutriscoreDataGridViewTextBoxColumn.HeaderText = "Nutriscore";
-            this.nutriscoreDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nutriscoreDataGridViewTextBoxColumn.Name = "nutriscoreDataGridViewTextBoxColumn";
-            this.nutriscoreDataGridViewTextBoxColumn.ReadOnly = true;
-            this.nutriscoreDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // stockcourantDataGridViewTextBoxColumn
-            // 
-            this.stockcourantDataGridViewTextBoxColumn.DataPropertyName = "Stock_courant";
-            this.stockcourantDataGridViewTextBoxColumn.HeaderText = "Stock_courant";
-            this.stockcourantDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.stockcourantDataGridViewTextBoxColumn.Name = "stockcourantDataGridViewTextBoxColumn";
-            this.stockcourantDataGridViewTextBoxColumn.ReadOnly = true;
-            this.stockcourantDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // produitBindingSource
-            // 
-            this.produitBindingSource.DataMember = "Produit";
-            this.produitBindingSource.DataSource = this.franprixgestionDataSetBindingSource;
-            // 
-            // categorieBindingSource
-            // 
-            this.categorieBindingSource.DataMember = "Categorie";
-            this.categorieBindingSource.DataSource = this.franprixgestionDataSetBindingSource;
+            this.textBoxSearch.Location = new System.Drawing.Point(131, 84);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(147, 22);
+            this.textBoxSearch.TabIndex = 18;
+            this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearch_TextChanged);
             // 
             // comboBoxcategorie
             // 
+            this.comboBoxcategorie.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.produitBindingSource, "Categorie", true));
+            this.comboBoxcategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxcategorie.FormattingEnabled = true;
-            this.comboBoxcategorie.Location = new System.Drawing.Point(335, 32);
+            this.comboBoxcategorie.Location = new System.Drawing.Point(131, 39);
             this.comboBoxcategorie.Name = "comboBoxcategorie";
-            this.comboBoxcategorie.Size = new System.Drawing.Size(152, 24);
+            this.comboBoxcategorie.Size = new System.Drawing.Size(147, 24);
             this.comboBoxcategorie.TabIndex = 10;
             this.comboBoxcategorie.SelectedIndexChanged += new System.EventHandler(this.comboBoxcategorie_SelectedIndexChanged);
             // 
             // label1
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 434);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(348, 32);
+            this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Vu sur l\'ensemble des produits :";
+            this.label1.Text = "Catégorie :";
             // 
-            // dataGridViewproduit
+            // label2
             // 
-            this.dataGridViewproduit.AllowUserToAddRows = false;
-            this.dataGridViewproduit.AllowUserToDeleteRows = false;
-            this.dataGridViewproduit.AutoGenerateColumns = false;
-            this.dataGridViewproduit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.dataGridViewproduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewproduit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1});
-            this.dataGridViewproduit.DataSource = this.produitBindingSource;
-            this.dataGridViewproduit.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewproduit.Location = new System.Drawing.Point(6, 42);
-            this.dataGridViewproduit.MultiSelect = false;
-            this.dataGridViewproduit.Name = "dataGridViewproduit";
-            this.dataGridViewproduit.ReadOnly = true;
-            this.dataGridViewproduit.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridViewproduit.RowTemplate.Height = 24;
-            this.dataGridViewproduit.Size = new System.Drawing.Size(251, 300);
-            this.dataGridViewproduit.TabIndex = 12;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 84);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 20);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Nom :";
             // 
-            // dataGridViewTextBoxColumn1
+            // label3
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Nom";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nom";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(6, 133);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(80, 20);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Marque : ";
             // 
-            // choixcategorie
+            // textBoxSearch2
             // 
-            this.choixcategorie.AutoSize = true;
-            this.choixcategorie.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.choixcategorie.Location = new System.Drawing.Point(13, 27);
-            this.choixcategorie.Name = "choixcategorie";
-            this.choixcategorie.Size = new System.Drawing.Size(318, 27);
-            this.choixcategorie.TabIndex = 13;
-            this.choixcategorie.Text = "Je m\'intéresse que sur la catégorie";
+            this.textBoxSearch2.Location = new System.Drawing.Point(131, 133);
+            this.textBoxSearch2.Name = "textBoxSearch2";
+            this.textBoxSearch2.Size = new System.Drawing.Size(147, 22);
+            this.textBoxSearch2.TabIndex = 21;
+            this.textBoxSearch2.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.quantite);
-            this.groupBox1.Controls.Add(this.dataGridViewproduit);
-            this.groupBox1.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(18, 62);
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.textBoxSearch2);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.comboBoxcategorie);
+            this.groupBox1.Controls.Add(this.textBoxSearch);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 210);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1316, 369);
-            this.groupBox1.TabIndex = 14;
+            this.groupBox1.Size = new System.Drawing.Size(445, 286);
+            this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Produits : ";
+            this.groupBox1.Text = "Rechercher/Trier";
             // 
-            // quantite
+            // btnAddProduct
             // 
-            this.quantite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.quantite.Controls.Add(this.buttonajoutquantite);
-            this.quantite.Controls.Add(this.textBox2);
-            this.quantite.Controls.Add(this.minimum);
-            this.quantite.Controls.Add(this.textBox1);
-            this.quantite.Controls.Add(this.actuel);
-            this.quantite.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantite.ForeColor = System.Drawing.Color.Black;
-            this.quantite.Location = new System.Drawing.Point(263, 42);
-            this.quantite.Name = "quantite";
-            this.quantite.Size = new System.Drawing.Size(548, 97);
-            this.quantite.TabIndex = 13;
-            this.quantite.TabStop = false;
-            this.quantite.Text = "Gestion De Quantite : ";
+            this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddProduct.Location = new System.Drawing.Point(1523, 439);
+            this.btnAddProduct.Name = "btnAddProduct";
+            this.btnAddProduct.Size = new System.Drawing.Size(158, 57);
+            this.btnAddProduct.TabIndex = 22;
+            this.btnAddProduct.Text = "Ajouter";
+            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
-            // buttonajoutquantite
+            // textNom
             // 
-            this.buttonajoutquantite.Location = new System.Drawing.Point(368, 36);
-            this.buttonajoutquantite.Name = "buttonajoutquantite";
-            this.buttonajoutquantite.Size = new System.Drawing.Size(112, 36);
-            this.buttonajoutquantite.TabIndex = 4;
-            this.buttonajoutquantite.Text = "Modifier";
-            this.buttonajoutquantite.UseVisualStyleBackColor = true;
+            this.textNom.Location = new System.Drawing.Point(109, 40);
+            this.textNom.Name = "textNom";
+            this.textNom.Size = new System.Drawing.Size(100, 22);
+            this.textNom.TabIndex = 7;
             // 
-            // textBox2
+            // label16
             // 
-            this.textBox2.Location = new System.Drawing.Point(277, 40);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(85, 32);
-            this.textBox2.TabIndex = 3;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(6, 43);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(37, 17);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "Nom";
             // 
-            // minimum
+            // textMarque
             // 
-            this.minimum.AutoSize = true;
-            this.minimum.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.minimum.Location = new System.Drawing.Point(176, 43);
-            this.minimum.Name = "minimum";
-            this.minimum.Size = new System.Drawing.Size(110, 26);
-            this.minimum.TabIndex = 2;
-            this.minimum.Text = "minimum : ";
+            this.textMarque.Location = new System.Drawing.Point(109, 85);
+            this.textMarque.Name = "textMarque";
+            this.textMarque.Size = new System.Drawing.Size(100, 22);
+            this.textMarque.TabIndex = 9;
             // 
-            // textBox1
+            // textPoids
             // 
-            this.textBox1.Location = new System.Drawing.Point(92, 40);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(78, 32);
-            this.textBox1.TabIndex = 1;
+            this.textPoids.Location = new System.Drawing.Point(109, 130);
+            this.textPoids.Name = "textPoids";
+            this.textPoids.Size = new System.Drawing.Size(100, 22);
+            this.textPoids.TabIndex = 10;
             // 
-            // actuel
+            // textStockmini
             // 
-            this.actuel.AutoSize = true;
-            this.actuel.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.actuel.Location = new System.Drawing.Point(26, 46);
-            this.actuel.Name = "actuel";
-            this.actuel.Size = new System.Drawing.Size(75, 26);
-            this.actuel.TabIndex = 0;
-            this.actuel.Text = "actuel : ";
-            this.actuel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.textStockmini.Location = new System.Drawing.Point(687, 85);
+            this.textStockmini.Name = "textStockmini";
+            this.textStockmini.Size = new System.Drawing.Size(100, 22);
+            this.textStockmini.TabIndex = 11;
             // 
-            // produitBindingSource1
+            // textStockcourant
             // 
-            this.produitBindingSource1.DataMember = "Produit";
-            this.produitBindingSource1.DataSource = this.franprixgestionDataSetBindingSource;
+            this.textStockcourant.Location = new System.Drawing.Point(687, 40);
+            this.textStockcourant.Name = "textStockcourant";
+            this.textStockcourant.Size = new System.Drawing.Size(100, 22);
+            this.textStockcourant.TabIndex = 12;
             // 
-            // menuStrip1
+            // textStockmax
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.allStockToolStripMenuItem,
-            this.gereQuantiterToolStripMenuItem,
-            this.parametreCompteToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1509, 28);
-            this.menuStrip1.TabIndex = 15;
-            this.menuStrip1.Text = "menuStrip1";
+            this.textStockmax.Location = new System.Drawing.Point(406, 230);
+            this.textStockmax.Name = "textStockmax";
+            this.textStockmax.Size = new System.Drawing.Size(100, 22);
+            this.textStockmax.TabIndex = 13;
             // 
-            // allStockToolStripMenuItem
+            // textPrixht
             // 
-            this.allStockToolStripMenuItem.Name = "allStockToolStripMenuItem";
-            this.allStockToolStripMenuItem.Size = new System.Drawing.Size(77, 24);
-            this.allStockToolStripMenuItem.Text = "all stock";
+            this.textPrixht.Location = new System.Drawing.Point(406, 40);
+            this.textPrixht.Name = "textPrixht";
+            this.textPrixht.Size = new System.Drawing.Size(100, 22);
+            this.textPrixht.TabIndex = 18;
             // 
-            // gereQuantiterToolStripMenuItem
+            // textTaille
             // 
-            this.gereQuantiterToolStripMenuItem.Name = "gereQuantiterToolStripMenuItem";
-            this.gereQuantiterToolStripMenuItem.Size = new System.Drawing.Size(117, 24);
-            this.gereQuantiterToolStripMenuItem.Text = "gere quantiter";
+            this.textTaille.Location = new System.Drawing.Point(109, 230);
+            this.textTaille.Name = "textTaille";
+            this.textTaille.Size = new System.Drawing.Size(100, 22);
+            this.textTaille.TabIndex = 19;
             // 
-            // parametreCompteToolStripMenuItem
+            // textVolume
             // 
-            this.parametreCompteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.changerDeCompteToolStripMenuItem});
-            this.parametreCompteToolStripMenuItem.Name = "parametreCompteToolStripMenuItem";
-            this.parametreCompteToolStripMenuItem.Size = new System.Drawing.Size(151, 24);
-            this.parametreCompteToolStripMenuItem.Text = "parametre compte ";
+            this.textVolume.Location = new System.Drawing.Point(109, 179);
+            this.textVolume.Name = "textVolume";
+            this.textVolume.Size = new System.Drawing.Size(100, 22);
+            this.textVolume.TabIndex = 20;
             // 
-            // changerDeCompteToolStripMenuItem
+            // label15
             // 
-            this.changerDeCompteToolStripMenuItem.Name = "changerDeCompteToolStripMenuItem";
-            this.changerDeCompteToolStripMenuItem.Size = new System.Drawing.Size(225, 26);
-            this.changerDeCompteToolStripMenuItem.Text = "changer de compte ";
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(584, 88);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(72, 17);
+            this.label15.TabIndex = 21;
+            this.label15.Text = "Stock Mini";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(584, 43);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(97, 17);
+            this.label14.TabIndex = 22;
+            this.label14.Text = "Stock Courant";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(319, 233);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(72, 17);
+            this.label13.TabIndex = 23;
+            this.label13.Text = "Stock Max";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(319, 185);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(73, 17);
+            this.label4.TabIndex = 24;
+            this.label4.Text = "Nutriscore";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(322, 136);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(69, 17);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Catégorie";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(584, 136);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 17);
+            this.label6.TabIndex = 26;
+            this.label6.Text = "Présentation";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(319, 88);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(81, 17);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "TVA (en %)";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(322, 43);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(54, 17);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Prix HT";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(6, 233);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 17);
+            this.label9.TabIndex = 29;
+            this.label9.Text = "Taille (en cm)";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 182);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(97, 17);
+            this.label10.TabIndex = 30;
+            this.label10.Text = "Volume (en L)";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(6, 130);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(85, 17);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Poids (en g)";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(6, 88);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(56, 17);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Marque";
+            // 
+            // comboBoxNutriscore
+            // 
+            this.comboBoxNutriscore.FormattingEnabled = true;
+            this.comboBoxNutriscore.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"});
+            this.comboBoxNutriscore.Location = new System.Drawing.Point(406, 182);
+            this.comboBoxNutriscore.Name = "comboBoxNutriscore";
+            this.comboBoxNutriscore.Size = new System.Drawing.Size(100, 24);
+            this.comboBoxNutriscore.TabIndex = 33;
+            // 
+            // comboBoxTVA
+            // 
+            this.comboBoxTVA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxTVA.FormattingEnabled = true;
+            this.comboBoxTVA.Items.AddRange(new object[] {
+            "20",
+            "10",
+            "5.5"});
+            this.comboBoxTVA.Location = new System.Drawing.Point(406, 85);
+            this.comboBoxTVA.Name = "comboBoxTVA";
+            this.comboBoxTVA.Size = new System.Drawing.Size(100, 24);
+            this.comboBoxTVA.TabIndex = 34;
+            // 
+            // richTextBoxPresentation
+            // 
+            this.richTextBoxPresentation.Location = new System.Drawing.Point(687, 136);
+            this.richTextBoxPresentation.Name = "richTextBoxPresentation";
+            this.richTextBoxPresentation.Size = new System.Drawing.Size(253, 116);
+            this.richTextBoxPresentation.TabIndex = 9;
+            this.richTextBoxPresentation.Text = "";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.categorieBindingSource, "ID", true));
+            this.comboBox1.DataSource = this.categorieBindingSource;
+            this.comboBox1.DisplayMember = "Nom";
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(406, 133);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(100, 24);
+            this.comboBox1.TabIndex = 35;
+            this.comboBox1.ValueMember = "ID";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.White;
+            this.groupBox2.Controls.Add(this.comboBox1);
+            this.groupBox2.Controls.Add(this.richTextBoxPresentation);
+            this.groupBox2.Controls.Add(this.comboBoxTVA);
+            this.groupBox2.Controls.Add(this.comboBoxNutriscore);
+            this.groupBox2.Controls.Add(this.label12);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.label7);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.textVolume);
+            this.groupBox2.Controls.Add(this.textTaille);
+            this.groupBox2.Controls.Add(this.textPrixht);
+            this.groupBox2.Controls.Add(this.textStockmax);
+            this.groupBox2.Controls.Add(this.textStockcourant);
+            this.groupBox2.Controls.Add(this.textStockmini);
+            this.groupBox2.Controls.Add(this.textPoids);
+            this.groupBox2.Controls.Add(this.textMarque);
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.textNom);
+            this.groupBox2.Location = new System.Drawing.Point(477, 210);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(1029, 286);
+            this.groupBox2.TabIndex = 21;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Ajouter un produit";
             // 
             // gestionstock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1509, 785);
+            this.ClientSize = new System.Drawing.Size(1693, 785);
+            this.Controls.Add(this.btnAddProduct);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.choixcategorie);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBoxcategorie);
+            this.Controls.Add(this.btnsavebase);
             this.Controls.Add(this.dataGridViewgestiondestock);
-            this.Controls.Add(this.BtnModifier);
-            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnDeconnexion);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "gestionstock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "gestion de stock";
             this.Load += new System.EventHandler(this.gestionstock_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprixgestionDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewgestiondestock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categorieBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKProduitCategorieBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewgestiondestock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
-            this.quantite.ResumeLayout(false);
-            this.quantite.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.BindingSource franprixgestionDataSetBindingSource;
         private Franprix_gestionDataSet franprix_gestionDataSet;
         private System.Windows.Forms.Button btnDeconnexion;
-        private System.Windows.Forms.Button btnAdd;
         private Franprix_gestionDataSetTableAdapters.CategorieTableAdapter categorieTableAdapter;
-        private System.Windows.Forms.Button BtnModifier;
         private Franprix_gestionDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private Franprix_gestionDataSetTableAdapters.ProduitTableAdapter produitTableAdapter;
-        private System.Windows.Forms.DataGridView dataGridViewgestiondestock;
         private System.Windows.Forms.BindingSource produitBindingSource;
         private System.Windows.Forms.BindingSource categorieBindingSource;
-        private System.Windows.Forms.ComboBox comboBoxcategorie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marqueDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn poidsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn volumeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tailleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prixHTDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tVADataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button btnsavebase;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.BindingSource fKProduitCategorieBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn presentationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categorieDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nutriscoreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock_minimum;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockcourantDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock_max;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nutriscoreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categorieDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tVADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prixHTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tailleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn volumeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn poidsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marqueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridViewgestiondestock;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        protected System.Windows.Forms.ComboBox comboBoxcategorie;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewproduit;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.Label choixcategorie;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxSearch2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox quantite;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label minimum;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label actuel;
-        private System.Windows.Forms.BindingSource produitBindingSource1;
-        private System.Windows.Forms.Button buttonajoutquantite;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem allStockToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem gereQuantiterToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem parametreCompteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem changerDeCompteToolStripMenuItem;
+        private System.Windows.Forms.Button btnAddProduct;
+        private System.Windows.Forms.TextBox textNom;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox textMarque;
+        private System.Windows.Forms.TextBox textPoids;
+        private System.Windows.Forms.TextBox textStockmini;
+        private System.Windows.Forms.TextBox textStockcourant;
+        private System.Windows.Forms.TextBox textStockmax;
+        private System.Windows.Forms.TextBox textPrixht;
+        private System.Windows.Forms.TextBox textTaille;
+        private System.Windows.Forms.TextBox textVolume;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBoxNutriscore;
+        private System.Windows.Forms.ComboBox comboBoxTVA;
+        private System.Windows.Forms.RichTextBox richTextBoxPresentation;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
     }
 }

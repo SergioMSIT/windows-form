@@ -128,6 +128,9 @@ namespace Windows_Project_GestionPAGE1
             this.Close();
         }
 
+        private void textNom_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
