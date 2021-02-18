@@ -85,7 +85,6 @@ namespace Windows_Project_GestionPAGE1
             this.textNom.Name = "textNom";
             this.textNom.Size = new System.Drawing.Size(100, 22);
             this.textNom.TabIndex = 7;
-            this.textNom.TextChanged += new System.EventHandler(this.textNom_TextChanged);
             // 
             // groupBox1
             // 
@@ -121,6 +120,7 @@ namespace Windows_Project_GestionPAGE1
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ajouter un produit";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // comboBoxCategorie
             // 
