@@ -1,26 +1,63 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
 namespace Windows_Project_GestionPAGE1
 {
-    public partial class AddProduct : Form
+    public partial class gestionstock : Form
     {
-        
-        public AddProduct()
+        public gestionstock()
         {
             InitializeComponent();
         }
 
         public string cs = @"Server = .\SQLEXPRESS; Database = Franprix_gestion; Trusted_Connection = True;";
 
+        private void gestionstock_Load(object sender, EventArgs e)
+        {
+            // TODO: cette ligne de code charge les données dans la table 'franprix_gestionDataSet.Produit'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.produitTableAdapter.Fill(this.franprix_gestionDataSet.Produit);
+            // TODO: cette ligne de code charge les données dans la table 'franprix_gestionDataSet.Categorie'. Vous pouvez la déplacer ou la supprimer selon les besoins.
+            this.categorieTableAdapter.Fill(this.franprix_gestionDataSet.Categorie);
+            int nb = this.franprix_gestionDataSet.Categorie.Rows.Count;
+
+            comboBoxcategorie.Items.Clear();
+            for (int i = 0; i < nb; i++)
+            {
+                string str = this.franprix_gestionDataSet.Categorie.Rows[i].ItemArray[1].ToString();
+                comboBoxcategorie.Items.Add(str);
+            }
+        }
+
+        private void btnDeconnexion_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddProduct addprod = new AddProduct();
+            addprod.ShowDialog();
+           
+        }
+
+        
+
+        private void comboBoxcategorie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            produitBindingSource.Filter = "Categorie = " + (comboBoxcategorie.SelectedIndex + 1);
+        }
+
+        
+  
+
+        private void btnsavebase_Click(object sender, EventArgs e)
+        {
+            this.produitTableAdapter.Update(this.franprix_gestionDataSet.Produit);
+        }
+
+   
+        
         private void btnAddProduct_Click(object sender, EventArgs e)
         {
             if (textNom.Text == "")
@@ -59,9 +96,9 @@ namespace Windows_Project_GestionPAGE1
                 MessageBox.Show("Veuillez indiquer la TVA !");
                 return;
             }
-            if (comboBoxCategorie.Text == "")
+            if (comboBox1.Text == "")
             {
-                comboBoxCategorie.Focus();
+                comboBox1.Focus();
                 MessageBox.Show("Veuillez indiquer la catégorie du produit !");
                 return;
             }
@@ -83,10 +120,10 @@ namespace Windows_Project_GestionPAGE1
                 MessageBox.Show("Veuillez indiquer le stock minimum !");
                 return;
             }
-            
+
 
             SqlConnection con = new SqlConnection(cs);
-            con.Open();            
+            con.Open();
             string poids = textPoids.Text == "" ? "NULL" : textPoids.Text;
             string volume = textVolume.Text == "" ? "NULL" : textVolume.Text;
             string taille = textTaille.Text == "" ? "NULL" : textTaille.Text;
@@ -95,39 +132,34 @@ namespace Windows_Project_GestionPAGE1
 
             string q = "INSERT INTO Produit(Nom,Marque,Poids,Volume,Taille,PrixHT,TVA,Categorie,Nutriscore,Stock_max,Stock_courant," +
                     "Stock_minimum,Presentation)" +
-                    " VALUES ('" + textNom.Text.ToString() + "','" + textMarque.Text.ToString() + "'," + poids + ", " 
-                    + volume + ", " + taille + "," + textPrixht.Text.ToString() + ", " + 
-                    comboBoxTVA.Text.ToString() + "," + Convert.ToInt32(comboBoxCategorie.SelectedValue).ToString() + ",'" +
+                    " VALUES ('" + textNom.Text.ToString() + "','" + textMarque.Text.ToString() + "'," + poids + ", "
+                    + volume + ", " + taille + "," + textPrixht.Text.ToString() + ", " +
+                    comboBoxTVA.Text.ToString() + "," + Convert.ToInt32(comboBox1.SelectedValue).ToString() + ",'" +
                     nutriscore + "'," + textStockmax.Text.ToString() + "," + textStockcourant.Text.ToString()
                     + "," + textStockmini.Text.ToString() + ",'" + presentation + "')";
             SqlCommand cmd = new SqlCommand(q, con);
-                int res = cmd.ExecuteNonQuery();
+            int res = cmd.ExecuteNonQuery();
             if (res > 0)
             {
                 MessageBox.Show("Produit ajouté");
             }
 
-            this.Close();
-
             
+
+
         }
 
-       
-
-        private void AddProduct_Load(object sender, EventArgs e)
+        private void textBoxSearch_TextChanged(object sender, EventArgs e)
         {
-            // TODO: cette ligne de code charge les données dans la table 'franprix_gestionDataSet.Categorie'. Vous pouvez la déplacer ou la supprimer selon les besoins.
-            this.categorieTableAdapter1.Fill(this.franprix_gestionDataSet.Categorie); 
-
+            produitBindingSource.Filter = "Nom like '" + textBoxSearch.Text + "%'";
         }
 
+        
 
-
-        private void buttonAnnuler_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
         {
-            this.Close();
+            produitBindingSource.Filter = "Marque like '" + textBoxSearch2.Text + "%'";
         }
-
-
     }
 }
+
