@@ -19,9 +19,41 @@ namespace Windows_Project_GestionPAGE1
             // TODO: cette ligne de code charge les données dans la table 'franprix_gestionDataSet.Categorie'. Vous pouvez la déplacer ou la supprimer selon les besoins.
             this.categorieTableAdapter.Fill(this.franprix_gestionDataSet.Categorie);
             int nb = this.franprix_gestionDataSet.Categorie.Rows.Count;
+
+
+            // parti modifier la quantite
+
             
-            
-            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             //la data du selecte 
             comboBoxcategorie.Items.Clear();
             for (int i = 0; i < nb; i++)
@@ -69,7 +101,15 @@ namespace Windows_Project_GestionPAGE1
             produitBindingSource.Filter = "Marque like '" + textBoxSearch2.Text + "%'";
         }
 
-       
+        private void dataGridViewproduit2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int index = e.RowIndex;
+            DataGridViewRow selectedRow = dataGridViewproduit2.Rows[index];
+            quantiteactuel.Text = selectedRow.Cells[1].Value.ToString();
+            quantitemini.Text = selectedRow.Cells[2].Value.ToString();
+
+
+        }
     }
 }
 
