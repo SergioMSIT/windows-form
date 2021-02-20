@@ -107,6 +107,9 @@
     <Compile Include="connexion.Designer.cs">
       <DependentUpon>connexion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Franprix_gestionDataSet.cs">
+      <DependentUpon>Franprix_gestionDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ModifierUnProduit.cs">
       <SubType>Form</SubType>
     </Compile>

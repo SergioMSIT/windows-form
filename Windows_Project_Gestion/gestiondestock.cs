@@ -20,40 +20,6 @@ namespace Windows_Project_GestionPAGE1
             this.categorieTableAdapter.Fill(this.franprix_gestionDataSet.Categorie);
             int nb = this.franprix_gestionDataSet.Categorie.Rows.Count;
 
-
-            // parti modifier la quantite
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             //la data du selecte 
             comboBoxcategorie.Items.Clear();
             for (int i = 0; i < nb; i++)
@@ -100,16 +66,42 @@ namespace Windows_Project_GestionPAGE1
         {
             produitBindingSource.Filter = "Marque like '" + textBoxSearch2.Text + "%'";
         }
+        
+        
+        // parti modifier la quantite
 
         private void dataGridViewproduit2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int index = e.RowIndex;
-            DataGridViewRow selectedRow = dataGridViewproduit2.Rows[index];
-            quantiteactuel.Text = selectedRow.Cells[1].Value.ToString();
-            quantitemini.Text = selectedRow.Cells[2].Value.ToString();
+            DataGridViewRow selectedRow = dataGridViewproduitShort.Rows[index];
+            TextBoxQuantiteactuel.Text = selectedRow.Cells[1].Value.ToString();
+            TextBoxQuantitemini.Text = selectedRow.Cells[2].Value.ToString();
 
 
         }
+
+        private void buttonajoutquantite_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewproduitShort.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            DataGridViewRow rowselect = dataGridViewproduitShort.SelectedRows[0];
+            int idrech = Convert.ToInt32(rowselect.Cells[3].Value);
+            Franprix_gestionDataSet.ProduitRow p =franprix_gestionDataSet.Produit.FindByID(idrech);
+            p.BeginEdit();            
+            p.Stock_minimum = Convert.ToInt32(TextBoxQuantitemini.Text);
+            p.Stock_courant = Convert.ToInt32(TextBoxQuantiteactuel.Text);
+            p.EndEdit();
+            franprix_gestionDataSet.Produit.AcceptChanges();
+
+
+        }
+
+
     }
 }
 

@@ -37,10 +37,10 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.categorieTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.CategorieTableAdapter();
             this.BtnModifier = new System.Windows.Forms.Button();
-            this.tableAdapterManager1 = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.TableAdapterManager();
             this.produitTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.ProduitTableAdapter();
             this.dataGridViewgestiondestock = new System.Windows.Forms.DataGridView();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.poidsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.volumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,15 +54,18 @@
             this.produitBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categorieBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridViewproduit2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewproduitShort = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock_courant = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock_minimum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.quantite = new System.Windows.Forms.GroupBox();
             this.buttonajoutquantite = new System.Windows.Forms.Button();
-            this.quantitemini = new System.Windows.Forms.TextBox();
+            this.TextBoxQuantitemini = new System.Windows.Forms.TextBox();
             this.minimum = new System.Windows.Forms.Label();
-            this.quantiteactuel = new System.Windows.Forms.TextBox();
+            this.TextBoxQuantiteactuel = new System.Windows.Forms.TextBox();
             this.actuel = new System.Windows.Forms.Label();
-            this.produitBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxSearch2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -70,19 +73,15 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxcategorie = new System.Windows.Forms.ComboBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock_courant = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Stock_minimum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprixgestionDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewgestiondestock)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categorieBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduitShort)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.quantite.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource1)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -144,20 +143,14 @@
             this.BtnModifier.UseVisualStyleBackColor = true;
             this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
             // 
-            // tableAdapterManager1
-            // 
-            this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager1.CategorieTableAdapter = this.categorieTableAdapter;
-            this.tableAdapterManager1.ConnexionTableAdapter = null;
-            this.tableAdapterManager1.ProduitTableAdapter = this.produitTableAdapter;
-            this.tableAdapterManager1.UpdateOrder = Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
             // produitTableAdapter
             // 
             this.produitTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewgestiondestock
             // 
+            this.dataGridViewgestiondestock.AllowUserToAddRows = false;
+            this.dataGridViewgestiondestock.AllowUserToDeleteRows = false;
             this.dataGridViewgestiondestock.AllowUserToOrderColumns = true;
             this.dataGridViewgestiondestock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -166,6 +159,7 @@
             this.dataGridViewgestiondestock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewgestiondestock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn2,
             this.marqueDataGridViewTextBoxColumn,
             this.poidsDataGridViewTextBoxColumn,
             this.volumeDataGridViewTextBoxColumn,
@@ -195,6 +189,15 @@
             this.nomDataGridViewTextBoxColumn.Name = "nomDataGridViewTextBoxColumn";
             this.nomDataGridViewTextBoxColumn.ReadOnly = true;
             this.nomDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Stock_minimum";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Stock_minimum";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.Width = 125;
             // 
             // marqueDataGridViewTextBoxColumn
             // 
@@ -307,34 +310,73 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Vu sur l\'ensemble des produits :";
             // 
-            // dataGridViewproduit2
+            // dataGridViewproduitShort
             // 
-            this.dataGridViewproduit2.AllowUserToAddRows = false;
-            this.dataGridViewproduit2.AllowUserToDeleteRows = false;
-            this.dataGridViewproduit2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridViewproduit2.AutoGenerateColumns = false;
-            this.dataGridViewproduit2.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.dataGridViewproduit2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewproduit2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewproduitShort.AllowUserToAddRows = false;
+            this.dataGridViewproduitShort.AllowUserToDeleteRows = false;
+            this.dataGridViewproduitShort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridViewproduitShort.AutoGenerateColumns = false;
+            this.dataGridViewproduitShort.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dataGridViewproduitShort.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewproduitShort.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.Stock_courant,
-            this.Stock_minimum});
-            this.dataGridViewproduit2.DataSource = this.produitBindingSource;
-            this.dataGridViewproduit2.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewproduit2.Location = new System.Drawing.Point(6, 40);
-            this.dataGridViewproduit2.MultiSelect = false;
-            this.dataGridViewproduit2.Name = "dataGridViewproduit2";
-            this.dataGridViewproduit2.ReadOnly = true;
-            this.dataGridViewproduit2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridViewproduit2.RowTemplate.Height = 24;
-            this.dataGridViewproduit2.Size = new System.Drawing.Size(251, 283);
-            this.dataGridViewproduit2.TabIndex = 12;
-            this.dataGridViewproduit2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewproduit2_CellContentClick);
+            this.Stock_minimum,
+            this.ID});
+            this.dataGridViewproduitShort.DataSource = this.produitBindingSource;
+            this.dataGridViewproduitShort.GridColor = System.Drawing.Color.Black;
+            this.dataGridViewproduitShort.Location = new System.Drawing.Point(6, 40);
+            this.dataGridViewproduitShort.MultiSelect = false;
+            this.dataGridViewproduitShort.Name = "dataGridViewproduitShort";
+            this.dataGridViewproduitShort.ReadOnly = true;
+            this.dataGridViewproduitShort.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridViewproduitShort.RowTemplate.Height = 24;
+            this.dataGridViewproduitShort.Size = new System.Drawing.Size(251, 283);
+            this.dataGridViewproduitShort.TabIndex = 12;
+            this.dataGridViewproduitShort.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewproduit2_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Nom";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Nom";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // Stock_courant
+            // 
+            this.Stock_courant.DataPropertyName = "Stock_courant";
+            this.Stock_courant.HeaderText = "Stock_courant";
+            this.Stock_courant.MinimumWidth = 6;
+            this.Stock_courant.Name = "Stock_courant";
+            this.Stock_courant.ReadOnly = true;
+            this.Stock_courant.Visible = false;
+            this.Stock_courant.Width = 125;
+            // 
+            // Stock_minimum
+            // 
+            this.Stock_minimum.DataPropertyName = "Stock_minimum";
+            this.Stock_minimum.HeaderText = "Stock_minimum";
+            this.Stock_minimum.MinimumWidth = 6;
+            this.Stock_minimum.Name = "Stock_minimum";
+            this.Stock_minimum.ReadOnly = true;
+            this.Stock_minimum.Visible = false;
+            this.Stock_minimum.Width = 125;
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "ID";
+            this.ID.HeaderText = "ID";
+            this.ID.MinimumWidth = 6;
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Width = 125;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.quantite);
-            this.groupBox1.Controls.Add(this.dataGridViewproduit2);
+            this.groupBox1.Controls.Add(this.dataGridViewproduitShort);
             this.groupBox1.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(12, 110);
             this.groupBox1.Name = "groupBox1";
@@ -347,9 +389,9 @@
             // 
             this.quantite.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.quantite.Controls.Add(this.buttonajoutquantite);
-            this.quantite.Controls.Add(this.quantitemini);
+            this.quantite.Controls.Add(this.TextBoxQuantitemini);
             this.quantite.Controls.Add(this.minimum);
-            this.quantite.Controls.Add(this.quantiteactuel);
+            this.quantite.Controls.Add(this.TextBoxQuantiteactuel);
             this.quantite.Controls.Add(this.actuel);
             this.quantite.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantite.ForeColor = System.Drawing.Color.Black;
@@ -368,13 +410,14 @@
             this.buttonajoutquantite.TabIndex = 4;
             this.buttonajoutquantite.Text = "Modifier";
             this.buttonajoutquantite.UseVisualStyleBackColor = true;
+            this.buttonajoutquantite.Click += new System.EventHandler(this.buttonajoutquantite_Click);
             // 
-            // quantitemini
+            // TextBoxQuantitemini
             // 
-            this.quantitemini.Location = new System.Drawing.Point(360, 43);
-            this.quantitemini.Name = "quantitemini";
-            this.quantitemini.Size = new System.Drawing.Size(118, 32);
-            this.quantitemini.TabIndex = 3;
+            this.TextBoxQuantitemini.Location = new System.Drawing.Point(360, 43);
+            this.TextBoxQuantitemini.Name = "TextBoxQuantitemini";
+            this.TextBoxQuantitemini.Size = new System.Drawing.Size(118, 32);
+            this.TextBoxQuantitemini.TabIndex = 3;
             // 
             // minimum
             // 
@@ -386,12 +429,12 @@
             this.minimum.TabIndex = 2;
             this.minimum.Text = "minimum : ";
             // 
-            // quantiteactuel
+            // TextBoxQuantiteactuel
             // 
-            this.quantiteactuel.Location = new System.Drawing.Point(106, 42);
-            this.quantiteactuel.Name = "quantiteactuel";
-            this.quantiteactuel.Size = new System.Drawing.Size(121, 32);
-            this.quantiteactuel.TabIndex = 1;
+            this.TextBoxQuantiteactuel.Location = new System.Drawing.Point(106, 42);
+            this.TextBoxQuantiteactuel.Name = "TextBoxQuantiteactuel";
+            this.TextBoxQuantiteactuel.Size = new System.Drawing.Size(121, 32);
+            this.TextBoxQuantiteactuel.TabIndex = 1;
             // 
             // actuel
             // 
@@ -403,11 +446,6 @@
             this.actuel.TabIndex = 0;
             this.actuel.Text = "actuel : ";
             this.actuel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // produitBindingSource1
-            // 
-            this.produitBindingSource1.DataMember = "Produit";
-            this.produitBindingSource1.DataSource = this.franprixgestionDataSetBindingSource;
             // 
             // groupBox2
             // 
@@ -487,35 +525,6 @@
             this.textBoxSearch.TabIndex = 30;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearchnom_TextChanged);
             // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "Nom";
-            this.dataGridViewTextBoxColumn1.HeaderText = "Nom";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // Stock_courant
-            // 
-            this.Stock_courant.DataPropertyName = "Stock_courant";
-            this.Stock_courant.HeaderText = "Stock_courant";
-            this.Stock_courant.MinimumWidth = 6;
-            this.Stock_courant.Name = "Stock_courant";
-            this.Stock_courant.ReadOnly = true;
-            this.Stock_courant.Visible = false;
-            this.Stock_courant.Width = 125;
-            // 
-            // Stock_minimum
-            // 
-            this.Stock_minimum.DataPropertyName = "Stock_minimum";
-            this.Stock_minimum.HeaderText = "Stock_minimum";
-            this.Stock_minimum.MinimumWidth = 6;
-            this.Stock_minimum.Name = "Stock_minimum";
-            this.Stock_minimum.ReadOnly = true;
-            this.Stock_minimum.Visible = false;
-            this.Stock_minimum.Width = 125;
-            // 
             // gestionstock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -541,11 +550,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewgestiondestock)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categorieBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduitShort)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.quantite.ResumeLayout(false);
             this.quantite.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource1)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -562,31 +570,18 @@
         private System.Windows.Forms.Button btnAdd;
         private Franprix_gestionDataSetTableAdapters.CategorieTableAdapter categorieTableAdapter;
         private System.Windows.Forms.Button BtnModifier;
-        private Franprix_gestionDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private Franprix_gestionDataSetTableAdapters.ProduitTableAdapter produitTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewgestiondestock;
         private System.Windows.Forms.BindingSource produitBindingSource;
         private System.Windows.Forms.BindingSource categorieBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn marqueDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn poidsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn volumeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tailleDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn prixHTDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tVADataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn presentationDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn categorieDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nutriscoreDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stockcourantDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridViewproduit2;
+        private System.Windows.Forms.DataGridView dataGridViewproduitShort;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox quantite;
-        private System.Windows.Forms.TextBox quantitemini;
+        private System.Windows.Forms.TextBox TextBoxQuantitemini;
         private System.Windows.Forms.Label minimum;
-        private System.Windows.Forms.TextBox quantiteactuel;
+        private System.Windows.Forms.TextBox TextBoxQuantiteactuel;
         private System.Windows.Forms.Label actuel;
-        private System.Windows.Forms.BindingSource produitBindingSource1;
         private System.Windows.Forms.Button buttonajoutquantite;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox textBoxSearch2;
@@ -598,5 +593,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock_courant;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock_minimum;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn marqueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn poidsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn volumeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tailleDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn prixHTDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tVADataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn presentationDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn categorieDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nutriscoreDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stockcourantDataGridViewTextBoxColumn;
     }
 }
