@@ -69,14 +69,6 @@ namespace Windows_Project_GestionPAGE1
         
         
         // parti modifier la quantite
-
-        private void dataGridViewproduit2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-          
-
-
-        }
-
         private void buttonajoutquantite_Click(object sender, EventArgs e)
         {
             if (dataGridViewproduitShort.SelectedRows.Count == 0)
