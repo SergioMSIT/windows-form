@@ -72,10 +72,7 @@ namespace Windows_Project_GestionPAGE1
 
         private void dataGridViewproduit2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int index = e.RowIndex;
-            DataGridViewRow selectedRow = dataGridViewproduitShort.Rows[index];
-            TextBoxQuantiteactuel.Text = selectedRow.Cells[1].Value.ToString();
-            TextBoxQuantitemini.Text = selectedRow.Cells[2].Value.ToString();
+          
 
 
         }
@@ -100,8 +97,15 @@ namespace Windows_Project_GestionPAGE1
 
 
         }
+        private void dataGridViewproduitShort_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            DataGridViewRow rowselect = dataGridViewproduitShort.SelectedRows[0];
+            int idrech = Convert.ToInt32(rowselect.Cells[3].Value);
+            Franprix_gestionDataSet.ProduitRow p = franprix_gestionDataSet.Produit.FindByID(idrech);
 
-
+            TextBoxQuantiteactuel.Text = Convert.ToString(p.Stock_courant);
+            TextBoxQuantitemini.Text = Convert.ToString(p.Stock_minimum);
+        }
     }
 }
 

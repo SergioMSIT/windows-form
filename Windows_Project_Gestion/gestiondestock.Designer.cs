@@ -333,7 +333,7 @@
             this.dataGridViewproduitShort.RowTemplate.Height = 24;
             this.dataGridViewproduitShort.Size = new System.Drawing.Size(251, 283);
             this.dataGridViewproduitShort.TabIndex = 12;
-            this.dataGridViewproduitShort.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewproduit2_CellContentClick);
+            this.dataGridViewproduitShort.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewproduitShort_RowHeaderMouseClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
