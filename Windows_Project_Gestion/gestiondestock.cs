@@ -60,8 +60,9 @@ namespace Windows_Project_GestionPAGE1
         private void textBoxSearchnom_TextChanged(object sender, EventArgs e)
         {
             produitBindingSource.Filter = "Nom like '" + textBoxSearch.Text + "%'";
-        }
 
+        }
+       
         private void textBoxSearchmarque_TextChanged(object sender, EventArgs e)
         {
             produitBindingSource.Filter = "Marque like '" + textBoxSearch2.Text + "%'";
@@ -97,6 +98,21 @@ namespace Windows_Project_GestionPAGE1
 
             TextBoxQuantiteactuel.Text = Convert.ToString(p.Stock_courant);
             TextBoxQuantitemini.Text = Convert.ToString(p.Stock_minimum);
+        }
+        //les bouton du "navbarre" en haut 
+        private void deconnexionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }   
+        private void ajouterUnProduitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddProduct addprod = new AddProduct();
+            addprod.ShowDialog();
+        }
+
+        private void modifierUnProduitToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

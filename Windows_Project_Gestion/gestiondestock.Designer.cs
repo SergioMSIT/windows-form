@@ -33,8 +33,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.franprixgestionDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.franprix_gestionDataSet = new Windows_Project_GestionPAGE1.Franprix_gestionDataSet();
-            this.btnDeconnexion = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
             this.categorieTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.CategorieTableAdapter();
             this.BtnModifier = new System.Windows.Forms.Button();
             this.produitTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.ProduitTableAdapter();
@@ -73,6 +71,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxcategorie = new System.Windows.Forms.ComboBox();
             this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.compteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierMonCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.produitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterUnProduitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modifierUnProduitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprixgestionDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
@@ -83,13 +88,14 @@
             this.groupBox1.SuspendLayout();
             this.quantite.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1338, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(1336, 31);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(195, 132);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -106,28 +112,6 @@
             this.franprix_gestionDataSet.DataSetName = "Franprix_gestionDataSet";
             this.franprix_gestionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // btnDeconnexion
-            // 
-            this.btnDeconnexion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDeconnexion.Location = new System.Drawing.Point(1398, 150);
-            this.btnDeconnexion.Name = "btnDeconnexion";
-            this.btnDeconnexion.Size = new System.Drawing.Size(135, 39);
-            this.btnDeconnexion.TabIndex = 6;
-            this.btnDeconnexion.Text = "Deconnexion";
-            this.btnDeconnexion.UseVisualStyleBackColor = true;
-            this.btnDeconnexion.Click += new System.EventHandler(this.btnDeconnexion_Click);
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(1398, 195);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(135, 39);
-            this.btnAdd.TabIndex = 7;
-            this.btnAdd.Text = "Ajouter un produit";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
             // categorieTableAdapter
             // 
             this.categorieTableAdapter.ClearBeforeFill = true;
@@ -135,7 +119,7 @@
             // BtnModifier
             // 
             this.BtnModifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnModifier.Location = new System.Drawing.Point(1398, 240);
+            this.BtnModifier.Location = new System.Drawing.Point(1396, 530);
             this.BtnModifier.Name = "BtnModifier";
             this.BtnModifier.Size = new System.Drawing.Size(135, 39);
             this.BtnModifier.TabIndex = 8;
@@ -172,13 +156,13 @@
             this.stockcourantDataGridViewTextBoxColumn});
             this.dataGridViewgestiondestock.DataSource = this.produitBindingSource;
             this.dataGridViewgestiondestock.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewgestiondestock.Location = new System.Drawing.Point(12, 533);
+            this.dataGridViewgestiondestock.Location = new System.Drawing.Point(12, 575);
             this.dataGridViewgestiondestock.MultiSelect = false;
             this.dataGridViewgestiondestock.Name = "dataGridViewgestiondestock";
             this.dataGridViewgestiondestock.ReadOnly = true;
             this.dataGridViewgestiondestock.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridViewgestiondestock.RowTemplate.Height = 24;
-            this.dataGridViewgestiondestock.Size = new System.Drawing.Size(1521, 275);
+            this.dataGridViewgestiondestock.Size = new System.Drawing.Size(1519, 275);
             this.dataGridViewgestiondestock.TabIndex = 9;
             // 
             // nomDataGridViewTextBoxColumn
@@ -304,7 +288,7 @@
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 13.8F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 482);
+            this.label1.Location = new System.Drawing.Point(6, 524);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(348, 32);
             this.label1.TabIndex = 11;
@@ -378,7 +362,7 @@
             this.groupBox1.Controls.Add(this.quantite);
             this.groupBox1.Controls.Add(this.dataGridViewproduitShort);
             this.groupBox1.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 110);
+            this.groupBox1.Location = new System.Drawing.Point(12, 150);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1316, 369);
             this.groupBox1.TabIndex = 14;
@@ -455,7 +439,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.comboBoxcategorie);
             this.groupBox2.Controls.Add(this.textBoxSearch);
-            this.groupBox2.Location = new System.Drawing.Point(12, 12);
+            this.groupBox2.Location = new System.Drawing.Point(12, 52);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1316, 58);
             this.groupBox2.TabIndex = 28;
@@ -525,21 +509,78 @@
             this.textBoxSearch.TabIndex = 30;
             this.textBoxSearch.TextChanged += new System.EventHandler(this.textBoxSearchnom_TextChanged);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.compteToolStripMenuItem,
+            this.produitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1543, 28);
+            this.menuStrip1.TabIndex = 29;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // compteToolStripMenuItem
+            // 
+            this.compteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.modifierMonCompteToolStripMenuItem,
+            this.deconnexionToolStripMenuItem});
+            this.compteToolStripMenuItem.Name = "compteToolStripMenuItem";
+            this.compteToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.compteToolStripMenuItem.Text = "compte";
+            // 
+            // modifierMonCompteToolStripMenuItem
+            // 
+            this.modifierMonCompteToolStripMenuItem.Name = "modifierMonCompteToolStripMenuItem";
+            this.modifierMonCompteToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.modifierMonCompteToolStripMenuItem.Text = "modifier mon compte";
+            // 
+            // deconnexionToolStripMenuItem
+            // 
+            this.deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
+            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
+            this.deconnexionToolStripMenuItem.Text = "deconnexion";
+            this.deconnexionToolStripMenuItem.Click += new System.EventHandler(this.deconnexionToolStripMenuItem_Click);
+            // 
+            // produitToolStripMenuItem
+            // 
+            this.produitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterUnProduitToolStripMenuItem,
+            this.modifierUnProduitToolStripMenuItem1});
+            this.produitToolStripMenuItem.Name = "produitToolStripMenuItem";
+            this.produitToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.produitToolStripMenuItem.Text = "produit ";
+            // 
+            // ajouterUnProduitToolStripMenuItem
+            // 
+            this.ajouterUnProduitToolStripMenuItem.Name = "ajouterUnProduitToolStripMenuItem";
+            this.ajouterUnProduitToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
+            this.ajouterUnProduitToolStripMenuItem.Text = "ajouter un produit";
+            this.ajouterUnProduitToolStripMenuItem.Click += new System.EventHandler(this.ajouterUnProduitToolStripMenuItem_Click);
+            // 
+            // modifierUnProduitToolStripMenuItem1
+            // 
+            this.modifierUnProduitToolStripMenuItem1.Name = "modifierUnProduitToolStripMenuItem1";
+            this.modifierUnProduitToolStripMenuItem1.Size = new System.Drawing.Size(226, 26);
+            this.modifierUnProduitToolStripMenuItem1.Text = "modifier un produit ";
+            this.modifierUnProduitToolStripMenuItem1.Click += new System.EventHandler(this.modifierUnProduitToolStripMenuItem1_Click);
+            // 
             // gestionstock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(1545, 820);
+            this.ClientSize = new System.Drawing.Size(1543, 862);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewgestiondestock);
             this.Controls.Add(this.BtnModifier);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.btnDeconnexion);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "gestionstock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "gestion de stock";
@@ -556,6 +597,8 @@
             this.quantite.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -566,8 +609,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.BindingSource franprixgestionDataSetBindingSource;
         private Franprix_gestionDataSet franprix_gestionDataSet;
-        private System.Windows.Forms.Button btnDeconnexion;
-        private System.Windows.Forms.Button btnAdd;
         private Franprix_gestionDataSetTableAdapters.CategorieTableAdapter categorieTableAdapter;
         private System.Windows.Forms.Button BtnModifier;
         private Franprix_gestionDataSetTableAdapters.ProduitTableAdapter produitTableAdapter;
@@ -606,5 +647,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn categorieDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nutriscoreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockcourantDataGridViewTextBoxColumn;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem compteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifierMonCompteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deconnexionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem produitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterUnProduitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifierUnProduitToolStripMenuItem1;
     }
 }
