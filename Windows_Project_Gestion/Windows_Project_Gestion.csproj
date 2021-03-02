@@ -110,6 +110,12 @@
     <Compile Include="Franprix_gestionDataSet.cs">
       <DependentUpon>Franprix_gestionDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ModifierCeProduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierCeProduit.Designer.cs">
+      <DependentUpon>ModifierCeProduit.cs</DependentUpon>
+    </Compile>
     <Compile Include="ModifierUnProduit.cs">
       <SubType>Form</SubType>
     </Compile>

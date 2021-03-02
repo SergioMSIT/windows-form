@@ -118,13 +118,17 @@
             // 
             // BtnModifier
             // 
-            this.BtnModifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnModifier.Location = new System.Drawing.Point(1396, 530);
+            this.BtnModifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(53)))));
+            this.BtnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnModifier.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModifier.ForeColor = System.Drawing.Color.White;
+            this.BtnModifier.Location = new System.Drawing.Point(1369, 538);
             this.BtnModifier.Name = "BtnModifier";
-            this.BtnModifier.Size = new System.Drawing.Size(135, 39);
+            this.BtnModifier.Size = new System.Drawing.Size(162, 31);
             this.BtnModifier.TabIndex = 8;
             this.BtnModifier.Text = "Modifer ce produit";
-            this.BtnModifier.UseVisualStyleBackColor = true;
+            this.BtnModifier.UseVisualStyleBackColor = false;
             this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
             // 
             // produitTableAdapter
@@ -388,19 +392,23 @@
             // 
             // buttonajoutquantite
             // 
+            this.buttonajoutquantite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(53)))));
+            this.buttonajoutquantite.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonajoutquantite.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonajoutquantite.ForeColor = System.Drawing.Color.White;
             this.buttonajoutquantite.Location = new System.Drawing.Point(484, 39);
             this.buttonajoutquantite.Name = "buttonajoutquantite";
-            this.buttonajoutquantite.Size = new System.Drawing.Size(112, 36);
+            this.buttonajoutquantite.Size = new System.Drawing.Size(97, 36);
             this.buttonajoutquantite.TabIndex = 4;
             this.buttonajoutquantite.Text = "Modifier";
-            this.buttonajoutquantite.UseVisualStyleBackColor = true;
+            this.buttonajoutquantite.UseVisualStyleBackColor = false;
             this.buttonajoutquantite.Click += new System.EventHandler(this.buttonajoutquantite_Click);
             // 
             // TextBoxQuantitemini
             // 
             this.TextBoxQuantitemini.Location = new System.Drawing.Point(360, 43);
             this.TextBoxQuantitemini.Name = "TextBoxQuantitemini";
-            this.TextBoxQuantitemini.Size = new System.Drawing.Size(118, 32);
+            this.TextBoxQuantitemini.Size = new System.Drawing.Size(106, 32);
             this.TextBoxQuantitemini.TabIndex = 3;
             // 
             // minimum
@@ -511,13 +519,14 @@
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.compteToolStripMenuItem,
             this.produitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1543, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1543, 30);
             this.menuStrip1.TabIndex = 29;
             this.menuStrip1.Text = "menuStrip1";
             // 
