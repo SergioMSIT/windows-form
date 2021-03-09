@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gestionstock));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.franprixgestionDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.franprix_gestionDataSet = new Windows_Project_GestionPAGE1.Franprix_gestionDataSet();
             this.categorieTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.CategorieTableAdapter();
@@ -78,7 +79,6 @@
             this.produitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUnProduitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierUnProduitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprixgestionDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewgestiondestock)).BeginInit();
@@ -90,17 +90,6 @@
             this.groupBox2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1336, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 132);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // franprixgestionDataSetBindingSource
             // 
@@ -119,7 +108,7 @@
             // BtnModifier
             // 
             this.BtnModifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(53)))));
+            this.BtnModifier.BackColor = System.Drawing.Color.Red;
             this.BtnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnModifier.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModifier.ForeColor = System.Drawing.Color.White;
@@ -143,7 +132,7 @@
             this.dataGridViewgestiondestock.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewgestiondestock.AutoGenerateColumns = false;
-            this.dataGridViewgestiondestock.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dataGridViewgestiondestock.BackgroundColor = System.Drawing.Color.DimGray;
             this.dataGridViewgestiondestock.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewgestiondestock.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nomDataGridViewTextBoxColumn,
@@ -304,7 +293,7 @@
             this.dataGridViewproduitShort.AllowUserToDeleteRows = false;
             this.dataGridViewproduitShort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewproduitShort.AutoGenerateColumns = false;
-            this.dataGridViewproduitShort.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.dataGridViewproduitShort.BackgroundColor = System.Drawing.Color.DimGray;
             this.dataGridViewproduitShort.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewproduitShort.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -312,11 +301,27 @@
             this.Stock_minimum,
             this.ID});
             this.dataGridViewproduitShort.DataSource = this.produitBindingSource;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridViewproduitShort.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewproduitShort.GridColor = System.Drawing.Color.Black;
             this.dataGridViewproduitShort.Location = new System.Drawing.Point(6, 40);
             this.dataGridViewproduitShort.MultiSelect = false;
             this.dataGridViewproduitShort.Name = "dataGridViewproduitShort";
             this.dataGridViewproduitShort.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewproduitShort.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewproduitShort.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridViewproduitShort.RowTemplate.Height = 24;
             this.dataGridViewproduitShort.Size = new System.Drawing.Size(251, 283);
@@ -366,6 +371,7 @@
             this.groupBox1.Controls.Add(this.quantite);
             this.groupBox1.Controls.Add(this.dataGridViewproduitShort);
             this.groupBox1.Font = new System.Drawing.Font("Palatino Linotype", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.White;
             this.groupBox1.Location = new System.Drawing.Point(12, 150);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(1316, 369);
@@ -392,7 +398,7 @@
             // 
             // buttonajoutquantite
             // 
-            this.buttonajoutquantite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(53)))));
+            this.buttonajoutquantite.BackColor = System.Drawing.Color.Red;
             this.buttonajoutquantite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonajoutquantite.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonajoutquantite.ForeColor = System.Drawing.Color.White;
@@ -447,6 +453,7 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.comboBoxcategorie);
             this.groupBox2.Controls.Add(this.textBoxSearch);
+            this.groupBox2.ForeColor = System.Drawing.Color.White;
             this.groupBox2.Location = new System.Drawing.Point(12, 52);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(1316, 58);
@@ -519,14 +526,14 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.White;
+            this.menuStrip1.BackColor = System.Drawing.Color.Gray;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.compteToolStripMenuItem,
             this.produitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1543, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1543, 28);
             this.menuStrip1.TabIndex = 29;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -579,22 +586,21 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1543, 862);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewgestiondestock);
             this.Controls.Add(this.BtnModifier);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "gestionstock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "gestion de stock";
             this.Load += new System.EventHandler(this.gestionstock_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprixgestionDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewgestiondestock)).EndInit();
@@ -614,8 +620,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.BindingSource franprixgestionDataSetBindingSource;
         private Franprix_gestionDataSet franprix_gestionDataSet;
         private Franprix_gestionDataSetTableAdapters.CategorieTableAdapter categorieTableAdapter;

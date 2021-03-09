@@ -110,6 +110,11 @@
     <Compile Include="Franprix_gestionDataSet.cs">
       <DependentUpon>Franprix_gestionDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="lensshopDataSetcloud.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>lensshopDataSetcloud.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ModifierCeProduit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +174,17 @@
     <None Include="Franprix_gestionDataSet.xss">
       <DependentUpon>Franprix_gestionDataSet.xsd</DependentUpon>
     </None>
+    <None Include="lensshopDataSetcloud.xsc">
+      <DependentUpon>lensshopDataSetcloud.xsd</DependentUpon>
+    </None>
+    <None Include="lensshopDataSetcloud.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>lensshopDataSetcloud.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="lensshopDataSetcloud.xss">
+      <DependentUpon>lensshopDataSetcloud.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -185,10 +201,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="IconeFranprix.ico" />
+    <None Include="Resources\l_series_promo_product_1280.jpg" />
+    <None Include="Resources\eos-r-lenses-promo_206985571703632.jpg" />
     <Content Include="Resources\Franprix_logo-removebg-preview.ico" />
     <Content Include="Resources\Franprix_logo-removebg-preview.png" />
+    <None Include="Resources\teste.jpg" />
+    <None Include="Resources\logo-rougepointpetits-0blanc.jpg" />
+    <None Include="Resources\logo2.jpg" />
     <None Include="Resources\logo-removebg-preview.png" />
     <None Include="Resources\Franprix logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

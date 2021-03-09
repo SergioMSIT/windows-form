@@ -33,5 +33,16 @@ namespace Windows_Project_GestionPAGE1.Properties {
                 return ((string)(this["Franprix_gestionConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=projetslessshop.database.windows.net;Initial Catalog=lensshop;Persist" +
+            " Security Info=True;User ID=younes;Password=projet.03")]
+        public string lensshopclouddatabase {
+            get {
+                return ((string)(this["lensshopclouddatabase"]));
+            }
+        }
     }
 }
