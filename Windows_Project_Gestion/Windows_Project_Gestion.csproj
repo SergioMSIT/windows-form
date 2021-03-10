@@ -187,6 +187,10 @@
     <Content Include="IconeFranprix.ico" />
     <Content Include="Resources\Franprix_logo-removebg-preview.ico" />
     <Content Include="Resources\Franprix_logo-removebg-preview.png" />
+    <None Include="Resources\logo_franprix.png" />
+    <None Include="Resources\images %282%29.png" />
+    <None Include="Resources\images %281%29.png" />
+    <None Include="Resources\images.png" />
     <None Include="Resources\logo-removebg-preview.png" />
     <None Include="Resources\Franprix logo.png" />
   </ItemGroup>

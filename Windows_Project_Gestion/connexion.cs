@@ -85,8 +85,9 @@ namespace Windows_Project_GestionPAGE1
             Application.Exit();
         }
 
-        
+        private void connexion_Load(object sender, EventArgs e)
+        {
 
-        
+        }
     }
 }

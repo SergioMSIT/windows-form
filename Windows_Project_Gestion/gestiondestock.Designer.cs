@@ -119,7 +119,7 @@
             // BtnModifier
             // 
             this.BtnModifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnModifier.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(53)))));
+            this.BtnModifier.BackColor = System.Drawing.Color.DarkOrange;
             this.BtnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnModifier.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnModifier.ForeColor = System.Drawing.Color.White;
@@ -392,7 +392,7 @@
             // 
             // buttonajoutquantite
             // 
-            this.buttonajoutquantite.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(154)))), ((int)(((byte)(53)))));
+            this.buttonajoutquantite.BackColor = System.Drawing.Color.DarkOrange;
             this.buttonajoutquantite.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonajoutquantite.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonajoutquantite.ForeColor = System.Drawing.Color.White;
@@ -520,13 +520,14 @@
             // menuStrip1
             // 
             this.menuStrip1.BackColor = System.Drawing.Color.White;
+            this.menuStrip1.BackgroundImage = global::Windows_Project_GestionPAGE1.Properties.Resources.images;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.compteToolStripMenuItem,
             this.produitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1543, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1543, 28);
             this.menuStrip1.TabIndex = 29;
             this.menuStrip1.Text = "menuStrip1";
             // 
