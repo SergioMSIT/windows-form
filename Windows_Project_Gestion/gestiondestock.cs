@@ -33,12 +33,22 @@ namespace Windows_Project_GestionPAGE1
 
 
         }
-        // bouton modifier ce produit
-       
+        // bouton  deconnexion / addproduit/modifier 
+        private void btnDeconnexion_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            AddProduct addprod = new AddProduct();
+            addprod.ShowDialog();
+        }
+
         private void BtnModifier_Click(object sender, EventArgs e)
         {
-            ModifierCeProduit updateone  = new ModifierCeProduit();
-            updateone.ShowDialog();
+            ModifierUnProduit update  = new ModifierUnProduit();
+            update.ShowDialog();
         }
         //tout les filtre / recherche produit 
         private void comboBoxcategorie_SelectedIndexChanged(object sender, EventArgs e)
@@ -102,8 +112,7 @@ namespace Windows_Project_GestionPAGE1
 
         private void modifierUnProduitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ModifierUnProduit update = new ModifierUnProduit();
-            update.ShowDialog();
+
         }
     }
 }

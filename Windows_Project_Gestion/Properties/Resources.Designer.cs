@@ -63,16 +63,6 @@ namespace Windows_Project_GestionPAGE1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap eos_r_lenses_promo_206985571703632 {
-            get {
-                object obj = ResourceManager.GetObject("eos-r-lenses-promo_206985571703632", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Franprix_logo {
             get {
                 object obj = ResourceManager.GetObject("Franprix logo", resourceCulture);
@@ -83,49 +73,9 @@ namespace Windows_Project_GestionPAGE1.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap l_series_promo_product_1280 {
-            get {
-                object obj = ResourceManager.GetObject("l_series_promo_product_1280", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap logo_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("logo-removebg-preview", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logo_rougepointpetits_0blanc {
-            get {
-                object obj = ResourceManager.GetObject("logo-rougepointpetits-0blanc", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap logo2 {
-            get {
-                object obj = ResourceManager.GetObject("logo2", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap teste {
-            get {
-                object obj = ResourceManager.GetObject("teste", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
