@@ -30,6 +30,7 @@ namespace Windows_Project_GestionPAGE1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ModifierUnProduit));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.comboBoxCategorie = new System.Windows.Forms.ComboBox();
             this.richTextBoxPresentation = new System.Windows.Forms.RichTextBox();
@@ -57,10 +58,7 @@ namespace Windows_Project_GestionPAGE1
             this.textMarque = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.textNom = new System.Windows.Forms.TextBox();
-            this.dataGridViewproduitShort = new System.Windows.Forms.DataGridView();
-            this.franprix_gestionDataSet = new Windows_Project_GestionPAGE1.Franprix_gestionDataSet();
-            this.produitBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.produitTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.ProduitTableAdapter();
+            this.dataGridViewproduitpourmodifierunproduit = new System.Windows.Forms.DataGridView();
             this.Stock_courant = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock_minimum = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,7 +75,12 @@ namespace Windows_Project_GestionPAGE1
             this.stockmaxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockcourantDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockminimumDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.produitBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.franprix_gestionDataSet = new Windows_Project_GestionPAGE1.Franprix_gestionDataSet();
+            this.produitTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.ProduitTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCancel = new System.Windows.Forms.Button();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxSearch2 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -87,12 +90,10 @@ namespace Windows_Project_GestionPAGE1
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduitShort)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduitpourmodifierunproduit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -361,15 +362,15 @@ namespace Windows_Project_GestionPAGE1
             this.textNom.Size = new System.Drawing.Size(100, 30);
             this.textNom.TabIndex = 7;
             // 
-            // dataGridViewproduitShort
+            // dataGridViewproduitpourmodifierunproduit
             // 
-            this.dataGridViewproduitShort.AllowUserToAddRows = false;
-            this.dataGridViewproduitShort.AllowUserToDeleteRows = false;
-            this.dataGridViewproduitShort.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.dataGridViewproduitShort.AutoGenerateColumns = false;
-            this.dataGridViewproduitShort.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(76)))), ((int)(((byte)(5)))));
-            this.dataGridViewproduitShort.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewproduitShort.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewproduitpourmodifierunproduit.AllowUserToAddRows = false;
+            this.dataGridViewproduitpourmodifierunproduit.AllowUserToDeleteRows = false;
+            this.dataGridViewproduitpourmodifierunproduit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.dataGridViewproduitpourmodifierunproduit.AutoGenerateColumns = false;
+            this.dataGridViewproduitpourmodifierunproduit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(76)))), ((int)(((byte)(5)))));
+            this.dataGridViewproduitpourmodifierunproduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewproduitpourmodifierunproduit.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Stock_courant,
             this.Stock_minimum,
             this.iDDataGridViewTextBoxColumn,
@@ -386,30 +387,16 @@ namespace Windows_Project_GestionPAGE1
             this.stockmaxDataGridViewTextBoxColumn,
             this.stockcourantDataGridViewTextBoxColumn,
             this.stockminimumDataGridViewTextBoxColumn});
-            this.dataGridViewproduitShort.DataSource = this.produitBindingSource;
-            this.dataGridViewproduitShort.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewproduitShort.Location = new System.Drawing.Point(8, 73);
-            this.dataGridViewproduitShort.MultiSelect = false;
-            this.dataGridViewproduitShort.Name = "dataGridViewproduitShort";
-            this.dataGridViewproduitShort.ReadOnly = true;
-            this.dataGridViewproduitShort.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridViewproduitShort.RowTemplate.Height = 24;
-            this.dataGridViewproduitShort.Size = new System.Drawing.Size(176, 283);
-            this.dataGridViewproduitShort.TabIndex = 13;
-            // 
-            // franprix_gestionDataSet
-            // 
-            this.franprix_gestionDataSet.DataSetName = "Franprix_gestionDataSet";
-            this.franprix_gestionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // produitBindingSource
-            // 
-            this.produitBindingSource.DataMember = "Produit";
-            this.produitBindingSource.DataSource = this.franprix_gestionDataSet;
-            // 
-            // produitTableAdapter
-            // 
-            this.produitTableAdapter.ClearBeforeFill = true;
+            this.dataGridViewproduitpourmodifierunproduit.DataSource = this.produitBindingSource;
+            this.dataGridViewproduitpourmodifierunproduit.GridColor = System.Drawing.Color.Black;
+            this.dataGridViewproduitpourmodifierunproduit.Location = new System.Drawing.Point(8, 22);
+            this.dataGridViewproduitpourmodifierunproduit.MultiSelect = false;
+            this.dataGridViewproduitpourmodifierunproduit.Name = "dataGridViewproduitpourmodifierunproduit";
+            this.dataGridViewproduitpourmodifierunproduit.ReadOnly = true;
+            this.dataGridViewproduitpourmodifierunproduit.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridViewproduitpourmodifierunproduit.RowTemplate.Height = 24;
+            this.dataGridViewproduitpourmodifierunproduit.Size = new System.Drawing.Size(176, 334);
+            this.dataGridViewproduitpourmodifierunproduit.TabIndex = 13;
             // 
             // Stock_courant
             // 
@@ -570,16 +557,57 @@ namespace Windows_Project_GestionPAGE1
             this.stockminimumDataGridViewTextBoxColumn.Visible = false;
             this.stockminimumDataGridViewTextBoxColumn.Width = 125;
             // 
+            // produitBindingSource
+            // 
+            this.produitBindingSource.DataMember = "Produit";
+            this.produitBindingSource.DataSource = this.franprix_gestionDataSet;
+            // 
+            // franprix_gestionDataSet
+            // 
+            this.franprix_gestionDataSet.DataSetName = "Franprix_gestionDataSet";
+            this.franprix_gestionDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // produitTableAdapter
+            // 
+            this.produitTableAdapter.ClearBeforeFill = true;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(76)))), ((int)(((byte)(5)))));
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnLogin);
-            this.panel2.Controls.Add(this.dataGridViewproduitShort);
+            this.panel2.Controls.Add(this.dataGridViewproduitpourmodifierunproduit);
             this.panel2.Location = new System.Drawing.Point(-3, 90);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(187, 513);
             this.panel2.TabIndex = 15;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(136)))), ((int)(((byte)(73)))));
+            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnCancel.Location = new System.Drawing.Point(0, 415);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(202, 63);
+            this.btnCancel.TabIndex = 14;
+            this.btnCancel.Text = "ANNULER";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(136)))), ((int)(((byte)(73)))));
+            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnLogin.Location = new System.Drawing.Point(0, 353);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(202, 59);
+            this.btnLogin.TabIndex = 15;
+            this.btnLogin.Text = "MODIFIER";
+            this.btnLogin.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
@@ -647,6 +675,7 @@ namespace Windows_Project_GestionPAGE1
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(147, 24);
             this.comboBox1.TabIndex = 28;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // textBoxSearch
             // 
@@ -677,33 +706,6 @@ namespace Windows_Project_GestionPAGE1
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnCancel
-            // 
-            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(136)))), ((int)(((byte)(73)))));
-            this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCancel.Location = new System.Drawing.Point(0, 415);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(202, 63);
-            this.btnCancel.TabIndex = 14;
-            this.btnCancel.Text = "ANNULER";
-            this.btnCancel.UseVisualStyleBackColor = false;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(136)))), ((int)(((byte)(73)))));
-            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogin.Location = new System.Drawing.Point(0, 353);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(202, 59);
-            this.btnLogin.TabIndex = 15;
-            this.btnLogin.Text = "MODIFIER";
-            this.btnLogin.UseVisualStyleBackColor = false;
-            // 
             // ModifierUnProduit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -714,15 +716,16 @@ namespace Windows_Project_GestionPAGE1
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ModifierUnProduit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modifier un produit";
             this.Load += new System.EventHandler(this.ModifierUnProduit_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduitShort)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduitpourmodifierunproduit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -761,7 +764,7 @@ namespace Windows_Project_GestionPAGE1
         private System.Windows.Forms.TextBox textMarque;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox textNom;
-        private System.Windows.Forms.DataGridView dataGridViewproduitShort;
+        private System.Windows.Forms.DataGridView dataGridViewproduitpourmodifierunproduit;
         private Franprix_gestionDataSet franprix_gestionDataSet;
         private System.Windows.Forms.BindingSource produitBindingSource;
         private Franprix_gestionDataSetTableAdapters.ProduitTableAdapter produitTableAdapter;

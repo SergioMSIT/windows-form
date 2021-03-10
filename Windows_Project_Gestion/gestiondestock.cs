@@ -47,7 +47,7 @@ namespace Windows_Project_GestionPAGE1
 
         private void BtnModifier_Click(object sender, EventArgs e)
         {
-            ModifierUnProduit update  = new ModifierUnProduit();
+            ModifierCeProduit update  = new ModifierCeProduit();
             update.ShowDialog();
         }
         //tout les filtre / recherche produit 
@@ -112,7 +112,8 @@ namespace Windows_Project_GestionPAGE1
 
         private void modifierUnProduitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            ModifierUnProduit update = new ModifierUnProduit();
+            update.ShowDialog();
         }
     }
 }
