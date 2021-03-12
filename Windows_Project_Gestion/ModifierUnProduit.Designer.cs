@@ -577,7 +577,7 @@ namespace Windows_Project_GestionPAGE1
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnLogin);
             this.panel2.Controls.Add(this.dataGridViewproduitpourmodifierunproduit);
-            this.panel2.Location = new System.Drawing.Point(-3, 90);
+            this.panel2.Location = new System.Drawing.Point(-3, 59);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(187, 513);
             this.panel2.TabIndex = 15;
@@ -588,7 +588,7 @@ namespace Windows_Project_GestionPAGE1
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCancel.Location = new System.Drawing.Point(0, 415);
+            this.btnCancel.Location = new System.Drawing.Point(0, 443);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(202, 63);
             this.btnCancel.TabIndex = 14;
@@ -602,7 +602,7 @@ namespace Windows_Project_GestionPAGE1
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogin.Location = new System.Drawing.Point(0, 353);
+            this.btnLogin.Location = new System.Drawing.Point(0, 378);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(202, 59);
             this.btnLogin.TabIndex = 15;
@@ -690,18 +690,18 @@ namespace Windows_Project_GestionPAGE1
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(76)))), ((int)(((byte)(5)))));
             this.panel1.BackgroundImage = global::Windows_Project_GestionPAGE1.Properties.Resources.images;
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Location = new System.Drawing.Point(-3, -13);
+            this.panel1.Location = new System.Drawing.Point(-4, -8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1151, 106);
+            this.panel1.Size = new System.Drawing.Size(1151, 68);
             this.panel1.TabIndex = 14;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Windows_Project_GestionPAGE1.Properties.Resources.logo_franprix;
-            this.pictureBox1.Location = new System.Drawing.Point(578, 0);
+            this.pictureBox1.Location = new System.Drawing.Point(627, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(694, 119);
+            this.pictureBox1.Size = new System.Drawing.Size(619, 75);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
