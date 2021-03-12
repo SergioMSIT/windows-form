@@ -102,6 +102,9 @@ namespace Windows_Project_GestionPAGE1
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.comboBoxCategorie);
             this.groupBox1.Controls.Add(this.richTextBoxPresentation);
             this.groupBox1.Controls.Add(this.comboBoxTVA);
@@ -366,7 +369,6 @@ namespace Windows_Project_GestionPAGE1
             // 
             this.dataGridViewproduitpourmodifierunproduit.AllowUserToAddRows = false;
             this.dataGridViewproduitpourmodifierunproduit.AllowUserToDeleteRows = false;
-            this.dataGridViewproduitpourmodifierunproduit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.dataGridViewproduitpourmodifierunproduit.AutoGenerateColumns = false;
             this.dataGridViewproduitpourmodifierunproduit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(76)))), ((int)(((byte)(5)))));
             this.dataGridViewproduitpourmodifierunproduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -573,6 +575,8 @@ namespace Windows_Project_GestionPAGE1
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(76)))), ((int)(((byte)(5)))));
             this.panel2.Controls.Add(this.btnCancel);
             this.panel2.Controls.Add(this.btnLogin);
@@ -584,6 +588,8 @@ namespace Windows_Project_GestionPAGE1
             // 
             // btnCancel
             // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(136)))), ((int)(((byte)(73)))));
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -597,6 +603,8 @@ namespace Windows_Project_GestionPAGE1
             // 
             // btnLogin
             // 
+            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(136)))), ((int)(((byte)(73)))));
             this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -619,7 +627,7 @@ namespace Windows_Project_GestionPAGE1
             this.groupBox2.Controls.Add(this.textBoxSearch);
             this.groupBox2.Location = new System.Drawing.Point(205, 112);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1316, 58);
+            this.groupBox2.Size = new System.Drawing.Size(929, 58);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recherche :";
@@ -656,7 +664,6 @@ namespace Windows_Project_GestionPAGE1
             // 
             // label16
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(28, 20);
@@ -687,16 +694,19 @@ namespace Windows_Project_GestionPAGE1
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(76)))), ((int)(((byte)(5)))));
             this.panel1.BackgroundImage = global::Windows_Project_GestionPAGE1.Properties.Resources.images;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(-4, -8);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1151, 68);
+            this.panel1.Size = new System.Drawing.Size(1148, 68);
             this.panel1.TabIndex = 14;
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = global::Windows_Project_GestionPAGE1.Properties.Resources.logo_franprix;
             this.pictureBox1.Location = new System.Drawing.Point(627, 2);
@@ -717,6 +727,7 @@ namespace Windows_Project_GestionPAGE1
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "ModifierUnProduit";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modifier un produit";
