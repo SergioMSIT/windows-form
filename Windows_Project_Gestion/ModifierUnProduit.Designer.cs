@@ -157,7 +157,7 @@ namespace Windows_Project_GestionPAGE1
             // 
             this.richTextBoxPresentation.Location = new System.Drawing.Point(459, 182);
             this.richTextBoxPresentation.Name = "richTextBoxPresentation";
-            this.richTextBoxPresentation.Size = new System.Drawing.Size(331, 116);
+            this.richTextBoxPresentation.Size = new System.Drawing.Size(331, 128);
             this.richTextBoxPresentation.TabIndex = 9;
             this.richTextBoxPresentation.Text = "";
             // 
@@ -640,9 +640,9 @@ namespace Windows_Project_GestionPAGE1
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.textBoxSearchNom);
-            this.groupBox2.Location = new System.Drawing.Point(317, 110);
+            this.groupBox2.Location = new System.Drawing.Point(240, 110);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(777, 58);
+            this.groupBox2.Size = new System.Drawing.Size(854, 58);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recherche :";
