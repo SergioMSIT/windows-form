@@ -49,6 +49,7 @@ namespace Windows_Project_GestionPAGE1
         {
             ModifierCeProduit update  = new ModifierCeProduit();
             update.ShowDialog();
+            this.Hide();
         }
         //tout les filtre / recherche produit 
         private void comboBoxcategorie_SelectedIndexChanged(object sender, EventArgs e)
@@ -114,6 +115,7 @@ namespace Windows_Project_GestionPAGE1
         {
             ModifierUnProduit update = new ModifierUnProduit();
             update.ShowDialog();
+            
         }
     }
 }

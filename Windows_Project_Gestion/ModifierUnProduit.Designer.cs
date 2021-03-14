@@ -82,14 +82,16 @@ namespace Windows_Project_GestionPAGE1
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnLogin = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBoxSearch2 = new System.Windows.Forms.TextBox();
+            this.textBoxSearchMarque = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.textBoxSearchNom = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.categorieBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categorieTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.CategorieTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewproduitpourmodifierunproduit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.produitBindingSource)).BeginInit();
@@ -98,6 +100,7 @@ namespace Windows_Project_GestionPAGE1
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categorieBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -132,9 +135,9 @@ namespace Windows_Project_GestionPAGE1
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.textNom);
             this.groupBox1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(205, 225);
+            this.groupBox1.Location = new System.Drawing.Point(240, 190);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(929, 343);
+            this.groupBox1.Size = new System.Drawing.Size(854, 376);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Modifier un produit";
@@ -144,7 +147,7 @@ namespace Windows_Project_GestionPAGE1
             this.comboBoxCategorie.DisplayMember = "Nom";
             this.comboBoxCategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxCategorie.FormattingEnabled = true;
-            this.comboBoxCategorie.Location = new System.Drawing.Point(426, 133);
+            this.comboBoxCategorie.Location = new System.Drawing.Point(459, 133);
             this.comboBoxCategorie.Name = "comboBoxCategorie";
             this.comboBoxCategorie.Size = new System.Drawing.Size(100, 31);
             this.comboBoxCategorie.TabIndex = 35;
@@ -152,7 +155,7 @@ namespace Windows_Project_GestionPAGE1
             // 
             // richTextBoxPresentation
             // 
-            this.richTextBoxPresentation.Location = new System.Drawing.Point(426, 182);
+            this.richTextBoxPresentation.Location = new System.Drawing.Point(459, 182);
             this.richTextBoxPresentation.Name = "richTextBoxPresentation";
             this.richTextBoxPresentation.Size = new System.Drawing.Size(331, 116);
             this.richTextBoxPresentation.TabIndex = 9;
@@ -166,7 +169,7 @@ namespace Windows_Project_GestionPAGE1
             "20",
             "10",
             "5.5"});
-            this.comboBoxTVA.Location = new System.Drawing.Point(426, 85);
+            this.comboBoxTVA.Location = new System.Drawing.Point(459, 85);
             this.comboBoxTVA.Name = "comboBoxTVA";
             this.comboBoxTVA.Size = new System.Drawing.Size(100, 31);
             this.comboBoxTVA.TabIndex = 34;
@@ -180,7 +183,7 @@ namespace Windows_Project_GestionPAGE1
             "C",
             "D",
             "E"});
-            this.comboBoxNutriscore.Location = new System.Drawing.Point(657, 44);
+            this.comboBoxNutriscore.Location = new System.Drawing.Point(690, 44);
             this.comboBoxNutriscore.Name = "comboBoxNutriscore";
             this.comboBoxNutriscore.Size = new System.Drawing.Size(100, 31);
             this.comboBoxNutriscore.TabIndex = 33;
@@ -224,7 +227,7 @@ namespace Windows_Project_GestionPAGE1
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(303, 43);
+            this.label8.Location = new System.Drawing.Point(336, 43);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(64, 23);
             this.label8.TabIndex = 28;
@@ -233,7 +236,7 @@ namespace Windows_Project_GestionPAGE1
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(303, 88);
+            this.label7.Location = new System.Drawing.Point(336, 88);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(95, 23);
             this.label7.TabIndex = 27;
@@ -242,7 +245,7 @@ namespace Windows_Project_GestionPAGE1
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(303, 182);
+            this.label6.Location = new System.Drawing.Point(336, 182);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(104, 23);
             this.label6.TabIndex = 26;
@@ -251,7 +254,7 @@ namespace Windows_Project_GestionPAGE1
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(303, 136);
+            this.label5.Location = new System.Drawing.Point(336, 136);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(83, 23);
             this.label5.TabIndex = 25;
@@ -260,7 +263,7 @@ namespace Windows_Project_GestionPAGE1
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(550, 47);
+            this.label4.Location = new System.Drawing.Point(583, 47);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(88, 23);
             this.label4.TabIndex = 24;
@@ -269,7 +272,7 @@ namespace Windows_Project_GestionPAGE1
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(550, 95);
+            this.label3.Location = new System.Drawing.Point(583, 95);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 23);
             this.label3.TabIndex = 23;
@@ -278,7 +281,7 @@ namespace Windows_Project_GestionPAGE1
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 297);
+            this.label2.Location = new System.Drawing.Point(6, 283);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 23);
             this.label2.TabIndex = 22;
@@ -287,7 +290,7 @@ namespace Windows_Project_GestionPAGE1
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(550, 141);
+            this.label1.Location = new System.Drawing.Point(583, 141);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 23);
             this.label1.TabIndex = 21;
@@ -295,80 +298,90 @@ namespace Windows_Project_GestionPAGE1
             // 
             // textVolume
             // 
-            this.textVolume.Location = new System.Drawing.Point(129, 179);
+            this.textVolume.Location = new System.Drawing.Point(138, 179);
             this.textVolume.Name = "textVolume";
-            this.textVolume.Size = new System.Drawing.Size(100, 30);
+            this.textVolume.Size = new System.Drawing.Size(168, 30);
             this.textVolume.TabIndex = 20;
+            this.textVolume.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textTaille
             // 
-            this.textTaille.Location = new System.Drawing.Point(129, 230);
+            this.textTaille.Location = new System.Drawing.Point(138, 230);
             this.textTaille.Name = "textTaille";
-            this.textTaille.Size = new System.Drawing.Size(100, 30);
+            this.textTaille.Size = new System.Drawing.Size(168, 30);
             this.textTaille.TabIndex = 19;
+            this.textTaille.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textPrixht
             // 
-            this.textPrixht.Location = new System.Drawing.Point(426, 40);
+            this.textPrixht.Location = new System.Drawing.Point(459, 40);
             this.textPrixht.Name = "textPrixht";
             this.textPrixht.Size = new System.Drawing.Size(100, 30);
             this.textPrixht.TabIndex = 18;
+            this.textPrixht.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textStockmax
             // 
-            this.textStockmax.Location = new System.Drawing.Point(657, 92);
+            this.textStockmax.Location = new System.Drawing.Point(690, 92);
             this.textStockmax.Name = "textStockmax";
             this.textStockmax.Size = new System.Drawing.Size(100, 30);
             this.textStockmax.TabIndex = 13;
+            this.textStockmax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textStockcourant
             // 
-            this.textStockcourant.Location = new System.Drawing.Point(129, 294);
+            this.textStockcourant.Location = new System.Drawing.Point(138, 280);
             this.textStockcourant.Name = "textStockcourant";
-            this.textStockcourant.Size = new System.Drawing.Size(100, 30);
+            this.textStockcourant.Size = new System.Drawing.Size(168, 30);
             this.textStockcourant.TabIndex = 12;
+            this.textStockcourant.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textStockmini
             // 
-            this.textStockmini.Location = new System.Drawing.Point(657, 138);
+            this.textStockmini.Location = new System.Drawing.Point(690, 138);
             this.textStockmini.Name = "textStockmini";
             this.textStockmini.Size = new System.Drawing.Size(100, 30);
             this.textStockmini.TabIndex = 11;
+            this.textStockmini.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textPoids
             // 
-            this.textPoids.Location = new System.Drawing.Point(129, 130);
+            this.textPoids.Location = new System.Drawing.Point(138, 130);
             this.textPoids.Name = "textPoids";
-            this.textPoids.Size = new System.Drawing.Size(100, 30);
+            this.textPoids.Size = new System.Drawing.Size(168, 30);
             this.textPoids.TabIndex = 10;
+            this.textPoids.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // textMarque
             // 
-            this.textMarque.Location = new System.Drawing.Point(129, 85);
+            this.textMarque.Location = new System.Drawing.Point(138, 85);
             this.textMarque.Name = "textMarque";
-            this.textMarque.Size = new System.Drawing.Size(100, 30);
+            this.textMarque.Size = new System.Drawing.Size(168, 30);
             this.textMarque.TabIndex = 9;
+            this.textMarque.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Location = new System.Drawing.Point(6, 43);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(48, 23);
+            this.label13.Size = new System.Drawing.Size(68, 23);
             this.label13.TabIndex = 8;
-            this.label13.Text = "Nom";
+            this.label13.Text = "Nom    ";
             // 
             // textNom
             // 
-            this.textNom.Location = new System.Drawing.Point(129, 40);
+            this.textNom.Location = new System.Drawing.Point(138, 40);
             this.textNom.Name = "textNom";
-            this.textNom.Size = new System.Drawing.Size(100, 30);
+            this.textNom.Size = new System.Drawing.Size(168, 30);
             this.textNom.TabIndex = 7;
+            this.textNom.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // dataGridViewproduitpourmodifierunproduit
             // 
             this.dataGridViewproduitpourmodifierunproduit.AllowUserToAddRows = false;
             this.dataGridViewproduitpourmodifierunproduit.AllowUserToDeleteRows = false;
+            this.dataGridViewproduitpourmodifierunproduit.AllowUserToOrderColumns = true;
             this.dataGridViewproduitpourmodifierunproduit.AutoGenerateColumns = false;
             this.dataGridViewproduitpourmodifierunproduit.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(76)))), ((int)(((byte)(5)))));
             this.dataGridViewproduitpourmodifierunproduit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -391,14 +404,15 @@ namespace Windows_Project_GestionPAGE1
             this.stockminimumDataGridViewTextBoxColumn});
             this.dataGridViewproduitpourmodifierunproduit.DataSource = this.produitBindingSource;
             this.dataGridViewproduitpourmodifierunproduit.GridColor = System.Drawing.Color.Black;
-            this.dataGridViewproduitpourmodifierunproduit.Location = new System.Drawing.Point(8, 22);
+            this.dataGridViewproduitpourmodifierunproduit.Location = new System.Drawing.Point(3, 7);
             this.dataGridViewproduitpourmodifierunproduit.MultiSelect = false;
             this.dataGridViewproduitpourmodifierunproduit.Name = "dataGridViewproduitpourmodifierunproduit";
             this.dataGridViewproduitpourmodifierunproduit.ReadOnly = true;
             this.dataGridViewproduitpourmodifierunproduit.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridViewproduitpourmodifierunproduit.RowTemplate.Height = 24;
-            this.dataGridViewproduitpourmodifierunproduit.Size = new System.Drawing.Size(176, 334);
+            this.dataGridViewproduitpourmodifierunproduit.Size = new System.Drawing.Size(203, 368);
             this.dataGridViewproduitpourmodifierunproduit.TabIndex = 13;
+            this.dataGridViewproduitpourmodifierunproduit.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewproduitpourmodifierunproduit_RowHeaderMouseClick);
             // 
             // Stock_courant
             // 
@@ -583,7 +597,7 @@ namespace Windows_Project_GestionPAGE1
             this.panel2.Controls.Add(this.dataGridViewproduitpourmodifierunproduit);
             this.panel2.Location = new System.Drawing.Point(-3, 59);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(187, 513);
+            this.panel2.Size = new System.Drawing.Size(209, 513);
             this.panel2.TabIndex = 15;
             // 
             // btnCancel
@@ -596,10 +610,11 @@ namespace Windows_Project_GestionPAGE1
             this.btnCancel.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnCancel.Location = new System.Drawing.Point(0, 443);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(202, 63);
+            this.btnCancel.Size = new System.Drawing.Size(209, 63);
             this.btnCancel.TabIndex = 14;
             this.btnCancel.Text = "ANNULER";
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnLogin
             // 
@@ -612,33 +627,34 @@ namespace Windows_Project_GestionPAGE1
             this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnLogin.Location = new System.Drawing.Point(0, 378);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(202, 59);
+            this.btnLogin.Size = new System.Drawing.Size(209, 59);
             this.btnLogin.TabIndex = 15;
             this.btnLogin.Text = "MODIFIER";
             this.btnLogin.UseVisualStyleBackColor = false;
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBoxSearch2);
+            this.groupBox2.Controls.Add(this.textBoxSearchMarque);
             this.groupBox2.Controls.Add(this.label14);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Controls.Add(this.label16);
             this.groupBox2.Controls.Add(this.comboBox1);
-            this.groupBox2.Controls.Add(this.textBoxSearch);
-            this.groupBox2.Location = new System.Drawing.Point(205, 112);
+            this.groupBox2.Controls.Add(this.textBoxSearchNom);
+            this.groupBox2.Location = new System.Drawing.Point(317, 110);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(929, 58);
+            this.groupBox2.Size = new System.Drawing.Size(777, 58);
             this.groupBox2.TabIndex = 36;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Recherche :";
             // 
-            // textBoxSearch2
+            // textBoxSearchMarque
             // 
-            this.textBoxSearch2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxSearch2.Location = new System.Drawing.Point(582, 20);
-            this.textBoxSearch2.Name = "textBoxSearch2";
-            this.textBoxSearch2.Size = new System.Drawing.Size(147, 22);
-            this.textBoxSearch2.TabIndex = 33;
+            this.textBoxSearchMarque.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxSearchMarque.Location = new System.Drawing.Point(582, 20);
+            this.textBoxSearchMarque.Name = "textBoxSearchMarque";
+            this.textBoxSearchMarque.Size = new System.Drawing.Size(147, 22);
+            this.textBoxSearchMarque.TabIndex = 33;
+            this.textBoxSearchMarque.TextChanged += new System.EventHandler(this.textBoxSearchMarque_TextChanged);
             // 
             // label14
             // 
@@ -684,13 +700,14 @@ namespace Windows_Project_GestionPAGE1
             this.comboBox1.TabIndex = 28;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // textBoxSearch
+            // textBoxSearchNom
             // 
-            this.textBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxSearch.Location = new System.Drawing.Point(343, 20);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(147, 22);
-            this.textBoxSearch.TabIndex = 30;
+            this.textBoxSearchNom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.textBoxSearchNom.Location = new System.Drawing.Point(343, 20);
+            this.textBoxSearchNom.Name = "textBoxSearchNom";
+            this.textBoxSearchNom.Size = new System.Drawing.Size(147, 22);
+            this.textBoxSearchNom.TabIndex = 30;
+            this.textBoxSearchNom.TextChanged += new System.EventHandler(this.textBoxSearchNom_TextChanged);
             // 
             // panel1
             // 
@@ -715,6 +732,14 @@ namespace Windows_Project_GestionPAGE1
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // categorieBindingSource
+            // 
+            this.categorieBindingSource.DataMember = "Categorie";
+            // 
+            // categorieTableAdapter
+            // 
+            this.categorieTableAdapter.ClearBeforeFill = true;
             // 
             // ModifierUnProduit
             // 
@@ -742,6 +767,7 @@ namespace Windows_Project_GestionPAGE1
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categorieBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -798,14 +824,16 @@ namespace Windows_Project_GestionPAGE1
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBoxSearch2;
+        private System.Windows.Forms.TextBox textBoxSearchMarque;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         protected System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.TextBox textBoxSearchNom;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.BindingSource categorieBindingSource;
+        private Franprix_gestionDataSetTableAdapters.CategorieTableAdapter categorieTableAdapter;
     }
 }

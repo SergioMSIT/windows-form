@@ -133,7 +133,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Franprix";
             this.TransparencyKey = System.Drawing.SystemColors.ButtonShadow;
-            this.Load += new System.EventHandler(this.connexion_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 
