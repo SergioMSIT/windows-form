@@ -17,13 +17,13 @@ namespace Windows_Project_GestionPAGE1
         {
             if (txtEmail.Text == "")
             {
-                MessageBox.Show("Entrez votre identifiant", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter user name", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 return;
             }
             if (txtMDP.Text == "")
             {
-                MessageBox.Show("Entrez votre mot de passe", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please enter password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMDP.Focus();
                 return;
             }
@@ -51,7 +51,7 @@ namespace Windows_Project_GestionPAGE1
 
                 if (myReader.Read() == true)
                 {
-                    MessageBox.Show("Vous êtes connecté");
+                    MessageBox.Show("You have logged in successfully ");
                     //Hide the login form
                     this.Hide();
                     gestionstock next = new gestionstock();
@@ -62,7 +62,7 @@ namespace Windows_Project_GestionPAGE1
 
                 else
                 {
-                    MessageBox.Show("Oups...petit problème, réessayez !", "Mauvais enregistrements", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Login Failed...Try again !", "Login Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     txtEmail.Clear();
                     txtMDP.Clear();

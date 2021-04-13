@@ -110,6 +110,18 @@
     <Compile Include="Franprix_gestionDataSet.cs">
       <DependentUpon>Franprix_gestionDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ModifierCeProduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierCeProduit.Designer.cs">
+      <DependentUpon>ModifierCeProduit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModifierUnProduit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModifierUnProduit.Designer.cs">
+      <DependentUpon>ModifierUnProduit.cs</DependentUpon>
+    </Compile>
     <Compile Include="Franprix_gestionDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -129,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="connexion.resx">
       <DependentUpon>connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModifierUnProduit.resx">
+      <DependentUpon>ModifierUnProduit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="gestiondestock.resx">
       <DependentUpon>gestiondestock.cs</DependentUpon>
