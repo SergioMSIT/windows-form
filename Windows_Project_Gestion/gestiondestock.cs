@@ -45,12 +45,7 @@ namespace Windows_Project_GestionPAGE1
             addprod.ShowDialog();
         }
 
-        private void BtnModifier_Click(object sender, EventArgs e)
-        {
-            ModifierCeProduit update  = new ModifierCeProduit();
-            update.ShowDialog();
-            this.Hide();
-        }
+        
         //tout les filtre / recherche produit 
         private void comboBoxcategorie_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -113,9 +108,13 @@ namespace Windows_Project_GestionPAGE1
 
         private void modifierUnProduitToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            ModifierUnProduit update = new ModifierUnProduit();
-            update.ShowDialog();
             
+            
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

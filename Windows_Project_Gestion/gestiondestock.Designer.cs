@@ -34,7 +34,6 @@
             this.franprixgestionDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.franprix_gestionDataSet = new Windows_Project_GestionPAGE1.Franprix_gestionDataSet();
             this.categorieTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.CategorieTableAdapter();
-            this.BtnModifier = new System.Windows.Forms.Button();
             this.produitTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.ProduitTableAdapter();
             this.dataGridViewgestiondestock = new System.Windows.Forms.DataGridView();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,11 +72,9 @@
             this.textBoxSearch = new System.Windows.Forms.TextBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.compteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierMonCompteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.deconnexionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.produitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUnProduitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.modifierUnProduitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprixgestionDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
@@ -115,21 +112,6 @@
             // categorieTableAdapter
             // 
             this.categorieTableAdapter.ClearBeforeFill = true;
-            // 
-            // BtnModifier
-            // 
-            this.BtnModifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnModifier.BackColor = System.Drawing.Color.DarkOrange;
-            this.BtnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnModifier.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModifier.ForeColor = System.Drawing.Color.White;
-            this.BtnModifier.Location = new System.Drawing.Point(1369, 538);
-            this.BtnModifier.Name = "BtnModifier";
-            this.BtnModifier.Size = new System.Drawing.Size(162, 31);
-            this.BtnModifier.TabIndex = 8;
-            this.BtnModifier.Text = "Modifer ce produit";
-            this.BtnModifier.UseVisualStyleBackColor = false;
-            this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
             // 
             // produitTableAdapter
             // 
@@ -398,7 +380,7 @@
             this.buttonajoutquantite.ForeColor = System.Drawing.Color.White;
             this.buttonajoutquantite.Location = new System.Drawing.Point(484, 39);
             this.buttonajoutquantite.Name = "buttonajoutquantite";
-            this.buttonajoutquantite.Size = new System.Drawing.Size(97, 36);
+            this.buttonajoutquantite.Size = new System.Drawing.Size(129, 36);
             this.buttonajoutquantite.TabIndex = 4;
             this.buttonajoutquantite.Text = "Modifier";
             this.buttonajoutquantite.UseVisualStyleBackColor = false;
@@ -457,7 +439,7 @@
             // textBoxSearch2
             // 
             this.textBoxSearch2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxSearch2.Location = new System.Drawing.Point(582, 20);
+            this.textBoxSearch2.Location = new System.Drawing.Point(799, 20);
             this.textBoxSearch2.Name = "textBoxSearch2";
             this.textBoxSearch2.Size = new System.Drawing.Size(147, 22);
             this.textBoxSearch2.TabIndex = 33;
@@ -468,7 +450,7 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(496, 20);
+            this.label3.Location = new System.Drawing.Point(713, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 20);
             this.label3.TabIndex = 32;
@@ -479,7 +461,7 @@
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(283, 20);
+            this.label2.Location = new System.Drawing.Point(436, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 20);
             this.label2.TabIndex = 31;
@@ -490,11 +472,12 @@
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(28, 20);
+            this.label4.Location = new System.Drawing.Point(127, 20);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(91, 20);
             this.label4.TabIndex = 29;
             this.label4.Text = "Catégorie :";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // comboBoxcategorie
             // 
@@ -502,7 +485,7 @@
             this.comboBoxcategorie.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.produitBindingSource, "Categorie", true));
             this.comboBoxcategorie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxcategorie.FormattingEnabled = true;
-            this.comboBoxcategorie.Location = new System.Drawing.Point(130, 16);
+            this.comboBoxcategorie.Location = new System.Drawing.Point(224, 19);
             this.comboBoxcategorie.Name = "comboBoxcategorie";
             this.comboBoxcategorie.Size = new System.Drawing.Size(147, 24);
             this.comboBoxcategorie.TabIndex = 28;
@@ -511,7 +494,7 @@
             // textBoxSearch
             // 
             this.textBoxSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.textBoxSearch.Location = new System.Drawing.Point(343, 20);
+            this.textBoxSearch.Location = new System.Drawing.Point(496, 21);
             this.textBoxSearch.Name = "textBoxSearch";
             this.textBoxSearch.Size = new System.Drawing.Size(147, 22);
             this.textBoxSearch.TabIndex = 30;
@@ -534,47 +517,32 @@
             // compteToolStripMenuItem
             // 
             this.compteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.modifierMonCompteToolStripMenuItem,
             this.deconnexionToolStripMenuItem});
             this.compteToolStripMenuItem.Name = "compteToolStripMenuItem";
-            this.compteToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
-            this.compteToolStripMenuItem.Text = "compte";
-            // 
-            // modifierMonCompteToolStripMenuItem
-            // 
-            this.modifierMonCompteToolStripMenuItem.Name = "modifierMonCompteToolStripMenuItem";
-            this.modifierMonCompteToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.modifierMonCompteToolStripMenuItem.Text = "modifier mon compte";
+            this.compteToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.compteToolStripMenuItem.Text = "Compte";
             // 
             // deconnexionToolStripMenuItem
             // 
             this.deconnexionToolStripMenuItem.Name = "deconnexionToolStripMenuItem";
-            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(238, 26);
-            this.deconnexionToolStripMenuItem.Text = "deconnexion";
+            this.deconnexionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.deconnexionToolStripMenuItem.Text = "Déconnexion";
             this.deconnexionToolStripMenuItem.Click += new System.EventHandler(this.deconnexionToolStripMenuItem_Click);
             // 
             // produitToolStripMenuItem
             // 
             this.produitToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajouterUnProduitToolStripMenuItem,
-            this.modifierUnProduitToolStripMenuItem1});
+            this.ajouterUnProduitToolStripMenuItem});
             this.produitToolStripMenuItem.Name = "produitToolStripMenuItem";
-            this.produitToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
-            this.produitToolStripMenuItem.Text = "produit ";
+            this.produitToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
+            this.produitToolStripMenuItem.Text = "Produit ";
             // 
             // ajouterUnProduitToolStripMenuItem
             // 
             this.ajouterUnProduitToolStripMenuItem.Name = "ajouterUnProduitToolStripMenuItem";
-            this.ajouterUnProduitToolStripMenuItem.Size = new System.Drawing.Size(226, 26);
-            this.ajouterUnProduitToolStripMenuItem.Text = "ajouter un produit";
+            this.ajouterUnProduitToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ajouterUnProduitToolStripMenuItem.Text = "Ajouter un produit";
             this.ajouterUnProduitToolStripMenuItem.Click += new System.EventHandler(this.ajouterUnProduitToolStripMenuItem_Click);
-            // 
-            // modifierUnProduitToolStripMenuItem1
-            // 
-            this.modifierUnProduitToolStripMenuItem1.Name = "modifierUnProduitToolStripMenuItem1";
-            this.modifierUnProduitToolStripMenuItem1.Size = new System.Drawing.Size(226, 26);
-            this.modifierUnProduitToolStripMenuItem1.Text = "modifier un produit ";
-            this.modifierUnProduitToolStripMenuItem1.Click += new System.EventHandler(this.modifierUnProduitToolStripMenuItem1_Click);
             // 
             // gestionstock
             // 
@@ -586,14 +554,13 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewgestiondestock);
-            this.Controls.Add(this.BtnModifier);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "gestionstock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "gestion de stock";
+            this.Text = "Franprix Gestion de stock";
             this.Load += new System.EventHandler(this.gestionstock_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprixgestionDataSetBindingSource)).EndInit();
@@ -620,7 +587,6 @@
         private System.Windows.Forms.BindingSource franprixgestionDataSetBindingSource;
         private Franprix_gestionDataSet franprix_gestionDataSet;
         private Franprix_gestionDataSetTableAdapters.CategorieTableAdapter categorieTableAdapter;
-        private System.Windows.Forms.Button BtnModifier;
         private Franprix_gestionDataSetTableAdapters.ProduitTableAdapter produitTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewgestiondestock;
         private System.Windows.Forms.BindingSource produitBindingSource;
@@ -659,10 +625,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stockcourantDataGridViewTextBoxColumn;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem compteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modifierMonCompteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deconnexionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem produitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ajouterUnProduitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modifierUnProduitToolStripMenuItem1;
     }
 }
