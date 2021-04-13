@@ -63,20 +63,31 @@ namespace Windows_Project_GestionPAGE1
             this.label13 = new System.Windows.Forms.Label();
             this.categorieTableAdapter1 = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.CategorieTableAdapter();
             this.buttonAnnuler = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAddProduct
             // 
+            this.btnAddProduct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(136)))), ((int)(((byte)(73)))));
+            this.btnAddProduct.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnAddProduct.CausesValidation = false;
+            this.btnAddProduct.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnAddProduct.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddProduct.Location = new System.Drawing.Point(898, 358);
+            this.btnAddProduct.Location = new System.Drawing.Point(5, 386);
             this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(143, 57);
+            this.btnAddProduct.Size = new System.Drawing.Size(201, 57);
             this.btnAddProduct.TabIndex = 6;
             this.btnAddProduct.Text = "Ajouter";
-            this.btnAddProduct.UseVisualStyleBackColor = true;
+            this.btnAddProduct.UseVisualStyleBackColor = false;
             this.btnAddProduct.Click += new System.EventHandler(this.btnAddProduct_Click);
             // 
             // textNom
@@ -114,12 +125,12 @@ namespace Windows_Project_GestionPAGE1
             this.groupBox1.Controls.Add(this.textMarque);
             this.groupBox1.Controls.Add(this.label13);
             this.groupBox1.Controls.Add(this.textNom);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(211, 201);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1029, 322);
+            this.groupBox1.Size = new System.Drawing.Size(1029, 372);
             this.groupBox1.TabIndex = 8;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Ajouter un produit";
+            this.groupBox1.Text = "information du produit ";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // comboBoxCategorie
@@ -359,25 +370,78 @@ namespace Windows_Project_GestionPAGE1
             // 
             // buttonAnnuler
             // 
+            this.buttonAnnuler.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(136)))), ((int)(((byte)(73)))));
+            this.buttonAnnuler.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.buttonAnnuler.CausesValidation = false;
             this.buttonAnnuler.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.buttonAnnuler.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.buttonAnnuler.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAnnuler.Location = new System.Drawing.Point(749, 358);
+            this.buttonAnnuler.Location = new System.Drawing.Point(5, 449);
             this.buttonAnnuler.Name = "buttonAnnuler";
-            this.buttonAnnuler.Size = new System.Drawing.Size(143, 57);
+            this.buttonAnnuler.Size = new System.Drawing.Size(203, 57);
             this.buttonAnnuler.TabIndex = 9;
             this.buttonAnnuler.Text = "Annuler";
-            this.buttonAnnuler.UseVisualStyleBackColor = true;
+            this.buttonAnnuler.UseVisualStyleBackColor = false;
             this.buttonAnnuler.Click += new System.EventHandler(this.buttonAnnuler_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(76)))), ((int)(((byte)(5)))));
+            this.panel1.BackgroundImage = global::Windows_Project_GestionPAGE1.Properties.Resources.images;
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Location = new System.Drawing.Point(-4, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1285, 68);
+            this.panel1.TabIndex = 16;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Windows_Project_GestionPAGE1.Properties.Resources.logo_franprix;
+            this.pictureBox1.Location = new System.Drawing.Point(764, 2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(619, 75);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(76)))), ((int)(((byte)(5)))));
+            this.panel2.Controls.Add(this.buttonAnnuler);
+            this.panel2.Controls.Add(this.btnAddProduct);
+            this.panel2.Location = new System.Drawing.Point(-3, 67);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(209, 513);
+            this.panel2.TabIndex = 17;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("MingLiU-ExtB", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(535, 116);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(357, 34);
+            this.label14.TabIndex = 18;
+            this.label14.Text = "Ajouter un produit ";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AddProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.CancelButton = this.buttonAnnuler;
-            this.ClientSize = new System.Drawing.Size(1053, 489);
-            this.Controls.Add(this.buttonAnnuler);
+            this.ClientSize = new System.Drawing.Size(1280, 585);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.btnAddProduct);
             this.Name = "AddProduct";
             this.Text = "AddProduct";
             this.Load += new System.EventHandler(this.AddProduct_Load);
@@ -385,7 +449,11 @@ namespace Windows_Project_GestionPAGE1
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -427,5 +495,9 @@ namespace Windows_Project_GestionPAGE1
         private Franprix_gestionDataSet franprix_gestionDataSet;
         private Franprix_gestionDataSetTableAdapters.CategorieTableAdapter categorieTableAdapter1;
         private System.Windows.Forms.Button buttonAnnuler;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label14;
     }
 }
