@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Windows_Project_GestionPAGE1
 {
-    public partial class ModifierCeProduit : Form
+    public partial class AjouterCompte : Form
     {
-        public ModifierCeProduit()
+        public AjouterCompte()
         {
             InitializeComponent();
         }

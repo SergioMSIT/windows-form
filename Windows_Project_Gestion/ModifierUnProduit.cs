@@ -54,10 +54,7 @@ namespace Windows_Project_GestionPAGE1
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            gestionstock gestion = new gestionstock();
-            gestion.ShowDialog();
-            
-            this.Hide();
+            this.Close();
         }
 
         private void dataGridViewproduitpourmodifierunproduit_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
