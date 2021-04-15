@@ -47,7 +47,7 @@ namespace Windows_Project_GestionPAGE1
 
         private void BtnModifier_Click(object sender, EventArgs e)
         {
-            AjouterCompte update  = new AjouterCompte();
+            ModifierCeProduit update  = new ModifierCeProduit();
             update.ShowDialog();
             this.Hide();
         }
