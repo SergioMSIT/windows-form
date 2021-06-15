@@ -525,7 +525,7 @@
             this.produitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1543, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1543, 30);
             this.menuStrip1.TabIndex = 29;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -535,7 +535,7 @@
             this.modifierMonCompteToolStripMenuItem,
             this.deconnexionToolStripMenuItem});
             this.compteToolStripMenuItem.Name = "compteToolStripMenuItem";
-            this.compteToolStripMenuItem.Size = new System.Drawing.Size(74, 24);
+            this.compteToolStripMenuItem.Size = new System.Drawing.Size(74, 26);
             this.compteToolStripMenuItem.Text = "compte";
             // 
             // modifierMonCompteToolStripMenuItem
@@ -557,7 +557,7 @@
             this.ajouterUnProduitToolStripMenuItem,
             this.modifierUnProduitToolStripMenuItem1});
             this.produitToolStripMenuItem.Name = "produitToolStripMenuItem";
-            this.produitToolStripMenuItem.Size = new System.Drawing.Size(76, 24);
+            this.produitToolStripMenuItem.Size = new System.Drawing.Size(76, 26);
             this.produitToolStripMenuItem.Text = "produit ";
             // 
             // ajouterUnProduitToolStripMenuItem
@@ -584,7 +584,7 @@
             this.buttonSUP.Name = "buttonSUP";
             this.buttonSUP.Size = new System.Drawing.Size(195, 32);
             this.buttonSUP.TabIndex = 30;
-            this.buttonSUP.Text = "Modifier";
+            this.buttonSUP.Text = "Supprimer ce produit ";
             this.buttonSUP.UseVisualStyleBackColor = false;
             this.buttonSUP.Click += new System.EventHandler(this.buttonSUP_Click);
             // 
