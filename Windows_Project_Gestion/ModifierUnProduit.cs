@@ -76,5 +76,32 @@ namespace Windows_Project_GestionPAGE1
             
             
         }
+
+        private void MODIFIER_CLICK(object sender, EventArgs e)
+        {
+            if (dataGridViewproduitpourmodifierunproduit.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            DataGridViewRow rowselect = dataGridViewproduitpourmodifierunproduit.SelectedRows[0];
+            int idrech = Convert.ToInt32(rowselect.Cells[2].Value);
+            Franprix_gestionDataSet.ProduitRow p = franprix_gestionDataSet.Produit.FindByID(idrech);
+            p.BeginEdit();
+            p.Nom = Convert.ToString(textNom.Text);
+            p.Marque = Convert.ToString(textMarque.Text);
+            p.Poids = Convert.ToInt32(textPoids.Text);
+            p.Stock_courant = Convert.ToInt32(textStockcourant.Text);
+            p.PrixHT = Convert.ToDecimal(textPrixht.Text);
+            p.Presentation = Convert.ToString(richTextBoxPresentation.Text);
+            p.Stock_courant = Convert.ToInt32(textStockcourant.Text);
+            p.Stock_minimum = Convert.ToInt32(textStockmini.Text);
+            p.EndEdit();
+            franprix_gestionDataSet.Produit.AcceptChanges();
+
+
+        }
     }
 }

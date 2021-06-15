@@ -34,12 +34,12 @@
             this.franprixgestionDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.franprix_gestionDataSet = new Windows_Project_GestionPAGE1.Franprix_gestionDataSet();
             this.categorieTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.CategorieTableAdapter();
-            this.BtnModifier = new System.Windows.Forms.Button();
             this.produitTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.ProduitTableAdapter();
             this.dataGridViewgestiondestock = new System.Windows.Forms.DataGridView();
             this.nomDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.marqueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.poidsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.volumeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tailleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -78,6 +78,7 @@
             this.produitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ajouterUnProduitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modifierUnProduitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.buttonSUP = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprixgestionDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.franprix_gestionDataSet)).BeginInit();
@@ -116,21 +117,6 @@
             // 
             this.categorieTableAdapter.ClearBeforeFill = true;
             // 
-            // BtnModifier
-            // 
-            this.BtnModifier.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnModifier.BackColor = System.Drawing.Color.DarkOrange;
-            this.BtnModifier.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.BtnModifier.Font = new System.Drawing.Font("Palatino Linotype", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModifier.ForeColor = System.Drawing.Color.White;
-            this.BtnModifier.Location = new System.Drawing.Point(1369, 538);
-            this.BtnModifier.Name = "BtnModifier";
-            this.BtnModifier.Size = new System.Drawing.Size(162, 31);
-            this.BtnModifier.TabIndex = 8;
-            this.BtnModifier.Text = "Modifer ce produit";
-            this.BtnModifier.UseVisualStyleBackColor = false;
-            this.BtnModifier.Click += new System.EventHandler(this.BtnModifier_Click);
-            // 
             // produitTableAdapter
             // 
             this.produitTableAdapter.ClearBeforeFill = true;
@@ -149,6 +135,7 @@
             this.nomDataGridViewTextBoxColumn,
             this.dataGridViewTextBoxColumn2,
             this.marqueDataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn3,
             this.poidsDataGridViewTextBoxColumn,
             this.volumeDataGridViewTextBoxColumn,
             this.tailleDataGridViewTextBoxColumn,
@@ -195,6 +182,16 @@
             this.marqueDataGridViewTextBoxColumn.Name = "marqueDataGridViewTextBoxColumn";
             this.marqueDataGridViewTextBoxColumn.ReadOnly = true;
             this.marqueDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ID";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ID";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
+            this.dataGridViewTextBoxColumn3.Width = 125;
             // 
             // poidsDataGridViewTextBoxColumn
             // 
@@ -359,6 +356,7 @@
             this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
             this.ID.ReadOnly = true;
+            this.ID.Visible = false;
             this.ID.Width = 125;
             // 
             // groupBox1
@@ -576,17 +574,31 @@
             this.modifierUnProduitToolStripMenuItem1.Text = "modifier un produit ";
             this.modifierUnProduitToolStripMenuItem1.Click += new System.EventHandler(this.modifierUnProduitToolStripMenuItem1_Click);
             // 
+            // buttonSUP
+            // 
+            this.buttonSUP.BackColor = System.Drawing.Color.DarkOrange;
+            this.buttonSUP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSUP.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.buttonSUP.ForeColor = System.Drawing.Color.White;
+            this.buttonSUP.Location = new System.Drawing.Point(1336, 537);
+            this.buttonSUP.Name = "buttonSUP";
+            this.buttonSUP.Size = new System.Drawing.Size(195, 32);
+            this.buttonSUP.TabIndex = 30;
+            this.buttonSUP.Text = "Modifier";
+            this.buttonSUP.UseVisualStyleBackColor = false;
+            this.buttonSUP.Click += new System.EventHandler(this.buttonSUP_Click);
+            // 
             // gestionstock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(1543, 862);
+            this.Controls.Add(this.buttonSUP);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridViewgestiondestock);
-            this.Controls.Add(this.BtnModifier);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -620,7 +632,6 @@
         private System.Windows.Forms.BindingSource franprixgestionDataSetBindingSource;
         private Franprix_gestionDataSet franprix_gestionDataSet;
         private Franprix_gestionDataSetTableAdapters.CategorieTableAdapter categorieTableAdapter;
-        private System.Windows.Forms.Button BtnModifier;
         private Franprix_gestionDataSetTableAdapters.ProduitTableAdapter produitTableAdapter;
         private System.Windows.Forms.DataGridView dataGridViewgestiondestock;
         private System.Windows.Forms.BindingSource produitBindingSource;
@@ -641,6 +652,13 @@
         private System.Windows.Forms.Label label4;
         protected System.Windows.Forms.ComboBox comboBoxcategorie;
         private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem compteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifierMonCompteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deconnexionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem produitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ajouterUnProduitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modifierUnProduitToolStripMenuItem1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock_courant;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stock_minimum;
@@ -648,6 +666,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nomDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn marqueDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn poidsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn volumeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tailleDataGridViewTextBoxColumn;
@@ -657,12 +676,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn categorieDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nutriscoreDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn stockcourantDataGridViewTextBoxColumn;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem compteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modifierMonCompteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem deconnexionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem produitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajouterUnProduitToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem modifierUnProduitToolStripMenuItem1;
+        private System.Windows.Forms.Button buttonSUP;
     }
 }

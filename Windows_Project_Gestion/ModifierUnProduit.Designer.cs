@@ -80,7 +80,7 @@ namespace Windows_Project_GestionPAGE1
             this.produitTableAdapter = new Windows_Project_GestionPAGE1.Franprix_gestionDataSetTableAdapters.ProduitTableAdapter();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnCancel = new System.Windows.Forms.Button();
-            this.btnLogin = new System.Windows.Forms.Button();
+            this.MODIFIER = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.textBoxSearchMarque = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
@@ -593,7 +593,7 @@ namespace Windows_Project_GestionPAGE1
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(76)))), ((int)(((byte)(5)))));
             this.panel2.Controls.Add(this.btnCancel);
-            this.panel2.Controls.Add(this.btnLogin);
+            this.panel2.Controls.Add(this.MODIFIER);
             this.panel2.Controls.Add(this.dataGridViewproduitpourmodifierunproduit);
             this.panel2.Location = new System.Drawing.Point(-3, 59);
             this.panel2.Name = "panel2";
@@ -616,21 +616,22 @@ namespace Windows_Project_GestionPAGE1
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // btnLogin
+            // MODIFIER
             // 
-            this.btnLogin.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.MODIFIER.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(136)))), ((int)(((byte)(73)))));
-            this.btnLogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogin.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnLogin.Location = new System.Drawing.Point(0, 378);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(209, 59);
-            this.btnLogin.TabIndex = 15;
-            this.btnLogin.Text = "MODIFIER";
-            this.btnLogin.UseVisualStyleBackColor = false;
+            this.MODIFIER.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(136)))), ((int)(((byte)(73)))));
+            this.MODIFIER.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.MODIFIER.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.MODIFIER.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MODIFIER.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.MODIFIER.Location = new System.Drawing.Point(0, 378);
+            this.MODIFIER.Name = "MODIFIER";
+            this.MODIFIER.Size = new System.Drawing.Size(209, 59);
+            this.MODIFIER.TabIndex = 15;
+            this.MODIFIER.Text = "MODIFIER";
+            this.MODIFIER.UseVisualStyleBackColor = false;
+            this.MODIFIER.Click += new System.EventHandler(this.MODIFIER_CLICK);
             // 
             // groupBox2
             // 
@@ -832,7 +833,7 @@ namespace Windows_Project_GestionPAGE1
         private System.Windows.Forms.TextBox textBoxSearchNom;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.Button btnLogin;
+        private System.Windows.Forms.Button MODIFIER;
         private System.Windows.Forms.BindingSource categorieBindingSource;
         private Franprix_gestionDataSetTableAdapters.CategorieTableAdapter categorieTableAdapter;
     }

@@ -47,9 +47,9 @@ namespace Windows_Project_GestionPAGE1
 
         private void BtnModifier_Click(object sender, EventArgs e)
         {
-            AjouterCompte update  = new AjouterCompte();
-            update.ShowDialog();
-            this.Hide();
+            
+            dataGridViewgestiondestock.Update();
+            dataGridViewgestiondestock.Refresh();
         }
         //tout les filtre / recherche produit 
         private void comboBoxcategorie_SelectedIndexChanged(object sender, EventArgs e)
@@ -117,6 +117,36 @@ namespace Windows_Project_GestionPAGE1
             update.ShowDialog();
             
         }
+
+        private void buttonSUP_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewgestiondestock.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            DataGridViewRow rowSelect = dataGridViewgestiondestock.SelectedRows[0];
+            int Idrech = Convert.ToInt32(rowSelect.Cells[3].Value);
+            Franprix_gestionDataSet.ProduitRow p = franprix_gestionDataSet.Produit.FindByID(Idrech);
+            p.Delete();
+        }
+
+        /*private void button1_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewgestiondestock.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Veuillez sélectionner une ligne !", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            DataGridViewRow rowSelect = dataGridViewgestiondestock.SelectedRows[0];
+            int Idrech = Convert.ToInt32(rowSelect.Cells[3].Value);
+            Franprix_gestionDataSet.ProduitRow p = franprix_gestionDataSet.Produit.FindByID(Idrech);
+            p.Delete();
+        }*/
     }
 }
 
